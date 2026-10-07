@@ -2,83 +2,132 @@
 
 ### Real-World Asset Verification & Tokenization Platform
 
-AssetProof is a Hyperledger Fabric-based platform for registering, verifying, valuing, digitally representing, transferring, and tracking real-world assets through their complete lifecycle.
+> **Verified Assets. Trusted Ownership.**
 
-The platform is designed to support multiple asset types such as **land, commodities, and invoices**, while maintaining a trusted and traceable digital record of each asset.
+AssetProof is a **Hyperledger Fabric-based platform** that brings real-world assets into a trusted digital lifecycle — from **registration and verification to valuation, tokenization, ownership transfer, provenance, and retirement**.
+
+It is designed to support multiple asset classes such as **land, commodities, and invoices** through a common, permissioned asset framework.
 
 ---
 
-## Problem Statement
+## 🎯 Problem Statement
 
-**PS-01 — Real-World Asset Tokenization Platform**
+### PS-01 — Real-World Asset Tokenization Platform
 
-Build a platform on Hyperledger Fabric that takes a real-world asset from **registration to retirement**.
+Real-world assets often involve fragmented records, manual verification, unclear ownership transitions, and limited traceability across their lifecycle.
 
-The platform should ensure that assets are:
+AssetProof addresses this by creating a **permissioned digital representation of an asset** and governing its lifecycle through Hyperledger Fabric smart contracts.
 
-- Registered with unique identities
+The platform enables assets to be:
+
+- Registered with a unique identity
 - Verified using supporting evidence
-- Valued before digital representation
-- Represented digitally on a permissioned blockchain
-- Governed through controlled ownership transfers
-- Traceable through their complete lifecycle
-- Retirable while preserving historical records
+- Given a cryptographic fingerprint
+- Valued before tokenization
+- Digitally represented on a permissioned blockchain
+- Transferred through controlled ownership workflows
+- Tracked through complete provenance history
+- Retired without losing historical records
 
 ---
 
-## Key Features
+## 🚀 Key Features
 
 ### 1. Multi-Asset Support
-Supports different real-world asset categories using a common asset framework:
+A common asset framework supporting:
 
-- Land
-- Commodities
-- Invoices
+- 🏞️ Land
+- ⛏️ Commodities
+- 📄 Invoices
 
 ### 2. Asset Registration & Verification
-Creates unique asset records and allows authorized users to verify asset information and supporting evidence.
+Creates unique asset records and allows authorized participants to verify asset details and supporting evidence before the asset progresses through the lifecycle.
 
 ### 3. Asset Fingerprint
-Generates a SHA-256 cryptographic fingerprint from verified asset information and supporting evidence to help detect changes to the registered record.
+Generates a **SHA-256 cryptographic fingerprint** from verified asset information and supporting evidence, creating a tamper-evident identity for the digital asset record.
 
 ### 4. Asset Valuation & Tokenization
-Records the verified asset value and creates a blockchain-based digital representation only after required validation steps are completed.
+Records verified asset valuation and creates a blockchain-based digital representation only after required verification and validation steps are completed.
 
 ### 5. Digital Asset Passport & QR Verification
-Provides a complete digital profile containing asset identity, owner, value, verification status, fingerprint, lifecycle status, and digital asset information.
+Provides a complete digital profile containing:
 
-### 6. Smart-Contract Ownership Transfer & Lifecycle Governance
-Uses Hyperledger Fabric chaincode to control ownership transfers and valid lifecycle transitions.
+- Asset identity
+- Asset type
+- Owner
+- Verified value
+- Verification status
+- SHA-256 fingerprint
+- Digital asset ID
+- Lifecycle status
+- Ownership history
 
-### 7. Immutable Provenance & Asset Protection
-Maintains a traceable history of important asset and ownership events while preventing invalid operations on inactive or retired assets.
+### 6. Smart-Contract Ownership Transfer
+Hyperledger Fabric chaincode governs ownership transfers by validating conditions such as:
+
+- Current owner authorization
+- Asset verification
+- Active lifecycle status
+- Eligible new owner
+- Valid transfer state
+
+### 7. Immutable Provenance
+Maintains a chronological record of important asset events including registration, verification, valuation, tokenization, ownership transfer, and retirement.
 
 ### 8. Role-Based Access Control
-Provides controlled access for different participants such as asset owners, verifiers, buyers, and auditors.
+Provides controlled access for different participants such as:
+
+- Asset Owner
+- Verifier
+- Buyer
+- Auditor
 
 ### 9. Asset Search & Filtering
-Allows users to quickly find assets using asset ID, asset type, owner, verification status, and lifecycle status.
+Enables users to quickly locate assets using:
+
+- Asset ID
+- Asset type
+- Owner
+- Verification status
+- Lifecycle status
 
 ### 10. Tamper-Evident Document Verification
-Uses document hashing to compare supporting evidence and identify changes to registered documents.
+Uses cryptographic hashing of supporting documents to detect changes between the registered evidence and later verification.
 
 ---
 
-## Asset Lifecycle
+## 🔄 Asset Lifecycle
 
 ```text
-Registration
-     ↓
-Verification
-     ↓
-Fingerprint Generation
-     ↓
-Valuation
-     ↓
-Tokenization
-     ↓
-Active Ownership
-     ↓
-Ownership Transfer
-     ↓
-Retirement
+┌──────────────┐
+│  Registration│
+└──────┬───────┘
+       ↓
+┌──────────────┐
+│ Verification │
+└──────┬───────┘
+       ↓
+┌────────────────────┐
+│ Fingerprint        │
+│ Generation         │
+└──────┬─────────────┘
+       ↓
+┌──────────────┐
+│  Valuation   │
+└──────┬───────┘
+       ↓
+┌──────────────┐
+│ Tokenization │
+└──────┬───────┘
+       ↓
+┌──────────────────┐
+│ Active Ownership │
+└──────┬───────────┘
+       ↓
+┌────────────────────┐
+│ Ownership Transfer │
+└──────┬─────────────┘
+       ↓
+┌──────────────┐
+│   Retirement │
+└──────────────┘
