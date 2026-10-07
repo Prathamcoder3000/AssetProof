@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary": "#ffffff", "surface-container-low": "#eff4ff", "surface-container-highest": "#d3e4fe", "on-error-container": "#93000a", "surface": "#f8f9ff", "secondary-fixed-dim": "#bec6e0", "tertiary-fixed-dim": "#93ccff", "on-background": "#0b1c30", "primary-container": "#1d4ed8", "inverse-surface": "#213145", "on-tertiary-fixed": "#001d31", "on-tertiary-fixed-variant": "#004b73", "tertiary": "#004870", "on-tertiary": "#ffffff", "primary-fixed": "#dce1ff", "primary-fixed-dim": "#b7c4ff", "tertiary-container": "#006194", "primary": "#0037b0", "error-container": "#ffdad6", "tertiary-fixed": "#cce5ff", "on-error": "#ffffff", "surface-bright": "#f8f9ff", "on-primary-container": "#cad3ff", "background": "#f8f9ff", "error": "#ba1a1a", "on-surface-variant": "#434655", "on-primary-fixed": "#001551", "secondary-fixed": "#dae2fd", "on-secondary-fixed": "#131b2e", "on-tertiary-container": "#b2d9ff", "on-surface": "#0b1c30", "surface-container-lowest": "#ffffff", "on-secondary-fixed-variant": "#3f465c", "outline": "#747686", "secondary-container": "#dae2fd", "surface-container-high": "#dce9ff", "inverse-primary": "#b7c4ff", "on-primary-fixed-variant": "#0039b5", "on-primary": "#ffffff", "surface-dim": "#cbdbf5", "surface-tint": "#2151da", "secondary": "#565e74", "inverse-on-surface": "#eaf1ff", "surface-container": "#e5eeff", "surface-variant": "#d3e4fe", "outline-variant": "#c4c5d7", "on-secondary-container": "#5c647a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "space-md": "1rem", "space-lg": "1.5rem", "margin-sm": "1rem", "space-xs": "0.25rem", "gutter-sm": "1rem", "space-xl": "2.5rem", "margin": "2rem", "space-sm": "0.5rem" }, "fontFamily": { "body-sm": ["Inter"], "headline-lg": ["Geist"], "headline-lg-mobile": ["Geist"], "display-lg": ["Geist"], "headline-sm": ["Geist"], "body-lg": ["Inter"], "code-sm": ["Geist"], "body-md": ["Inter"], "headline-md": ["Geist"], "label-md": ["Inter"], "display-lg-mobile": ["Geist"], "label-sm": ["Inter"] }, "fontSize": { "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.005em", "fontWeight": "400" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "code-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }], "display-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between select-none"><div class="flex flex-col flex-1 min-h-0"><div class="h-16 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[20px]">verified_user</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight tracking-tight">AssetProof</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Enterprise Console</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">lock</span></div><nav class="flex-1 px-space-md py-space-sm overflow-y-auto flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-medium rounded-lg shadow-sm"><div class="px-space-sm pt-space-xs pb-1"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Platform Navigation</span></div><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="overview" href="#"><span>Overview</span></a><div class="mt-space-xs flex flex-col gap-1"><div class="flex items-center justify-between px-space-sm py-1.5 text-on-surface font-label-md text-label-md font-semibold"><span>Assets</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></div><div class="pl-4 pr-space-xs flex flex-col gap-space-xs"><a class="flex items-center justify-between px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="all-assets" href="#"><span>All Assets</span><span class="font-code-sm text-code-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">1,428</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="pending-verification" href="#"><span>Pending Verification</span><span class="font-code-sm text-code-sm px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-medium">14</span></a><a class="flex items-center px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="tokenized" href="#"><span>Tokenized</span></a><a class="flex items-center px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="retired" href="#"><span>Retired</span></a></div></div><div class="my-space-xs"></div><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="transfers" href="#"><span>Transfers</span></a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="verification-ledger" href="#"><span>Verification Ledger</span></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-2 transition-colors bg-primary-container text-on-primary font-medium rounded-lg shadow-sm" data-path="asset-valuation" href="#"><span>Asset Valuation</span></a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="asset-passport" href="#"><span>Asset Passport</span></a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="activity-log" href="#"><span>Activity Log</span></a><div class="my-space-xs"></div><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="console-settings" href="#"><span>Console Settings</span></a></nav></div><div class="p-space-md bg-surface-container-low m-space-md rounded-xl flex flex-col gap-2"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Node Telemetry</span><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-code-sm text-code-sm text-on-surface font-semibold">Connected</span></div></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-code-sm text-code-sm font-medium">#0492-East (US-VA)</span><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface font-semibold">FIPS 140-3</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-2xl"><div class="hidden xl:flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><span class="hover:text-on-surface cursor-pointer">Platform</span><span class="material-symbols-outlined text-[14px]">chevron_right</span><span class="hover:text-on-surface cursor-pointer">Compliance</span><span class="material-symbols-outlined text-[14px]">chevron_right</span><span class="text-on-surface font-semibold">Verification Ledger</span></div><div class="relative flex-1 flex items-center"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px]">search</span><input class="w-full h-10 pl-10 pr-4 bg-surface-container-low rounded-lg text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container transition-all" placeholder="Search by Asset ID, hash, issuer, or legal entity... (⌘K)" type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-label-sm text-label-sm text-on-surface font-medium">All Nodes Operational</span></div><button aria-label="Notifications" class="relative p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="hidden lg:flex flex-col items-end text-right"><span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Apex Custody Corp</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Admin | Compliance Officer</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen px-gutter py-space-lg"><div class="flex flex-col w-full">
+<!-- Top Breadcrumb & Workflow Metadata Header -->
+<section class="flex flex-col gap-space-sm mb-space-lg">
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="hover:text-on-surface cursor-pointer">Institutional Ledger</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="hover:text-on-surface cursor-pointer">Assets</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="hover:text-on-surface cursor-pointer">INV-001</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="hover:text-on-surface cursor-pointer">Transfers</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface font-semibold">Transfer Ownership</span>
+</div>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Transfer Ownership</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+          Transfer the verified digital asset representation under smart-contract governance.
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-2.5">
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">policy</span>
+<span class="font-code-sm text-code-sm font-semibold">Attestation Protocol v4.8.2-SECURE</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-tertiary">lock_clock</span>
+<span class="font-code-sm text-code-sm font-semibold">HSM Witness #HSM-902-SG (FIPS 140-3)</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-highest text-primary font-semibold">
+<span class="material-symbols-outlined text-[16px]">token</span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase">ERC-3643 Permissioned</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Focus Asset Context Strip -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg mb-space-lg">
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md pb-space-md mb-space-md bg-surface-container-low/40 -mx-space-lg -mt-space-lg p-space-lg rounded-t-xl">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[24px]">receipt_long</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">ABC Supply Invoice</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant font-medium">(Series 2025-A)</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-code-sm text-code-sm font-semibold">RWA-INV-001</span>
+</div>
+<div class="flex items-center gap-2 mt-0.5 text-on-surface-variant font-body-sm text-body-sm">
+<span>Asset ID:</span>
+<span class="font-code-sm text-code-sm font-semibold text-on-surface">INV-001</span>
+<button aria-label="Copy Asset ID" class="hover:text-primary transition-colors flex items-center" onclick="navigator.clipboard.writeText('INV-001')" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+</button>
+<span class="text-outline-variant">•</span>
+<span>Commercial Receivables / Corporate Invoice</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-lg">
+<div class="flex flex-col lg:items-end">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Verified Valuation</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">₹40,00,000</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">INR (~$48,150 USD)</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold">ACTIVE</span>
+</div>
+</div>
+</div>
+<!-- Context Strip Details Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<div class="flex flex-col gap-1 p-space-sm rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Current Beneficial Owner</span>
+<div class="flex items-center gap-2">
+<span class="font-body-md text-body-md font-semibold text-on-surface">ABC Ltd</span>
+<span class="material-symbols-outlined text-[16px] text-primary" title="Identity Attested">verified</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant truncate">LEI: 5493001KJTIIG284729</span>
+</div>
+<div class="flex flex-col gap-1 p-space-sm rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Registration Root</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Hyperledger Ledger Root</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant truncate">Block #18,294,002 (Anchored)</span>
+</div>
+<div class="flex flex-col gap-1 p-space-sm rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Fiduciary Custodian</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Apex Custody Corp</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Custody License #FIN-9921</span>
+</div>
+<div class="flex flex-col gap-1 p-space-sm rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Legal Transferability</span>
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+<span class="font-body-md text-body-md font-semibold">Unencumbered</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">No lien registered in CERSAI</span>
+</div>
+</div>
+</section>
+<!-- Two-Column Workflow Layout -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg mb-space-lg">
+<!-- LEFT COLUMN (Transfer Parameters & Smart Contract Checks) -->
+<div class="xl:col-span-7 flex flex-col gap-space-lg">
+<!-- Card 1: Transfer Governance & Destination Entity -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-low/30 -mx-space-lg -mt-space-lg p-space-lg rounded-t-xl">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-primary">account_balance</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Transfer Governance &amp; Destination Entity</h2>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-semibold">Regulated Entity</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-2">
+<!-- Transferee Name -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface">New Owner / Beneficial Transferee</label>
+<div class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-low text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary">domain</span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold leading-tight">XYZ Ltd</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Verified Institutional Entity</span>
+</div>
+</div>
+</div>
+<!-- Transferee Org ID & LEI -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface">New Owner Org ID &amp; LEI</label>
+<div class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-low text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-tertiary">fingerprint</span>
+<div class="flex flex-col">
+<span class="font-code-sm text-code-sm font-semibold text-on-surface leading-tight">ORG-XYZ-001</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant leading-tight">LEI: 3358009ZXTR1892837</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Transferee Jurisdiction -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Transferee Jurisdiction &amp; KYC/AML Status</label>
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-primary">shield_person</span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">India / SEBI Registered Eligible Purchaser</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Central KYC Registry Record #CKYC-99102-IN</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold tracking-wider uppercase">KYC Level 3 Verified</span>
+</div>
+</div>
+<!-- Transfer Type & Mandate -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Transfer Type</label>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low text-on-surface">
+<span class="font-body-md text-body-md truncate">Absolute Legal Title &amp; Economic Rights</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">lock</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Transfer Mandate / Reason</label>
+<div class="p-2.5 rounded-lg bg-surface-container-low text-on-surface">
+<span class="font-body-md text-body-md">Business Transfer / Secondary Market Assignment</span>
+</div>
+</div>
+</div>
+<!-- Contract Reference -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Contract / Legal Agreement Reference</label>
+<div class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">description</span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">AGR-2025-XYZ-0994-SALE</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(Novation &amp; Escrow Addendum)</span>
+</div>
+</div>
+<!-- Supporting Documentation Card -->
+<div class="flex flex-col gap-2 pt-1">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Supporting Fiduciary Documentation</label>
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low/80 hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">novation_agreement_signed.pdf</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">1.8 MB • SHA-256 Validated (d41d8cd98f00b204e9800998ecf8427e)</span>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Document</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2: Automated Smart Contract Transfer Prerequisite Checks -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-low/30 -mx-space-lg -mt-space-lg p-space-lg rounded-t-xl">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-primary">rule</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Smart Contract Transfer Prerequisite Checks</h2>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-code-sm text-code-sm font-semibold">6 / 6 PASSED</span>
+</div>
+<!-- Checklist -->
+<div class="flex flex-col gap-2.5 pt-1">
+<!-- Gate 1 -->
+<div class="flex items-start justify-between p-3 rounded-lg bg-surface-container-low/60">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Asset is verified</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cryptographic fingerprint anchored in ledger root #18,294,002</span>
+</div>
+</div>
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded bg-surface-container text-primary font-semibold">ATTESTED</span>
+</div>
+<!-- Gate 2 -->
+<div class="flex items-start justify-between p-3 rounded-lg bg-surface-container-low/60">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Asset is active</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Status confirmed in permissioned chaincode contract state</span>
+</div>
+</div>
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded bg-surface-container text-primary font-semibold">ACTIVE</span>
+</div>
+<!-- Gate 3 -->
+<div class="flex items-start justify-between p-3 rounded-lg bg-surface-container-low/60">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Current owner is authorized</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">ABC Ltd signatory quorum confirmed via FIPS 140-3 HSM session token</span>
+</div>
+</div>
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded bg-surface-container text-primary font-semibold">AUTHORIZED</span>
+</div>
+<!-- Gate 4 -->
+<div class="flex items-start justify-between p-3 rounded-lg bg-surface-container-low/60">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">New owner is eligible</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">XYZ Ltd passes ERC-3643 institutional identity compliance &amp; whitelist verification</span>
+</div>
+</div>
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded bg-surface-container text-primary font-semibold">ELIGIBLE</span>
+</div>
+<!-- Gate 5 -->
+<div class="flex items-start justify-between p-3 rounded-lg bg-surface-container-low/60">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Asset is not retired</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lifecycle status verified as non-expired, unredeemed</span>
+</div>
+</div>
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded bg-surface-container text-primary font-semibold">VALID</span>
+</div>
+<!-- Gate 6 -->
+<div class="flex items-start justify-between p-3 rounded-lg bg-surface-container-low/60">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Transfer conditions satisfied</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">All fiduciary escrow covenants and SEBI secondary transfer conditions met</span>
+</div>
+</div>
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded bg-surface-container text-primary font-semibold">SATISFIED</span>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">verified</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">6 of 6 Compliance Gates Passed. Smart contract execution permitted.</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant font-semibold">RULESET: ERC3643-RWA-2025</span>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN (Transfer Execution & Summary) -->
+<div class="xl:col-span-5 flex flex-col gap-space-lg">
+<!-- Card 1: Transfer Summary & Settlement Architecture -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-low/30 -mx-space-lg -mt-space-lg p-space-lg rounded-t-xl">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-primary">receipt</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Transfer Summary &amp; Settlement Architecture</h2>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant font-semibold">SPEC-V4</span>
+</div>
+<!-- Transfer Lineage Visual Mini-Map -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Relinquishing Party</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">ABC Ltd</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">ORG-ABC-992</span>
+</div>
+<div class="flex flex-col items-center px-4">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">ERC-3643</span>
+<span class="material-symbols-outlined text-[22px] text-primary">arrow_forward</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Novation</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Acquiring Party</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">XYZ Ltd</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">ORG-XYZ-001</span>
+</div>
+</div>
+<!-- Settlement Spec Table -->
+<div class="flex flex-col gap-2 pt-1 font-body-sm text-body-sm">
+<div class="flex items-center justify-between py-2 bg-surface-container-low/40 px-3 rounded">
+<span class="text-on-surface-variant">Asset Identifier</span>
+<div class="flex items-center gap-1.5 font-code-sm text-code-sm font-semibold text-on-surface">
+<span>INV-001</span>
+<span class="text-on-surface-variant">(RWA-INV-001)</span>
+</div>
+</div>
+<div class="flex items-center justify-between py-2 bg-surface-container-low/40 px-3 rounded">
+<span class="text-on-surface-variant">Verified Asset Value</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">₹40,00,000 INR</span>
+</div>
+<div class="flex items-center justify-between py-2 bg-surface-container-low/40 px-3 rounded">
+<span class="text-on-surface-variant">Smart Contract ID</span>
+<span class="font-code-sm text-code-sm font-semibold text-primary truncate max-w-[200px]" title="cc-rwa-assetproof-v4.2 (ERC-3643 Permissioned)">
+              cc-rwa-assetproof-v4.2
+            </span>
+</div>
+<div class="flex items-center justify-between py-2 bg-surface-container-low/40 px-3 rounded">
+<span class="text-on-surface-variant">Settlement Network</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Hyperledger Fabric</span>
+</div>
+<div class="flex items-center justify-between py-2 bg-surface-container-low/40 px-3 rounded">
+<span class="text-on-surface-variant">Ledger Consensus</span>
+<span class="font-code-sm text-code-sm font-semibold text-on-surface">Raft BFT Ordering Service</span>
+</div>
+<div class="flex items-center justify-between py-2 bg-surface-container-low/40 px-3 rounded">
+<span class="text-on-surface-variant">Escrow Release Hash</span>
+<div class="flex items-center gap-1">
+<span class="font-code-sm text-code-sm text-on-surface font-mono font-medium">0x9f4a...88ac</span>
+<button aria-label="Copy Hash" class="hover:text-primary transition-colors flex items-center" onclick="navigator.clipboard.writeText('0x9f4ac7221b089e1739f4ad3b4c102a9e583c88ac')" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2: Interactive Confirmation Review Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-start gap-3 p-3.5 rounded-lg bg-surface-container-low text-on-surface">
+<span class="material-symbols-outlined text-primary text-[24px]">verified_user</span>
+<div class="flex flex-col gap-1">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface leading-tight">
+              Confirm ownership transfer from ABC Ltd to XYZ Ltd?
+            </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Executing this action transfers the canonical digital asset token representation (RWA-INV-001) and updates the immutable ownership registry on the permissioned ledger. This operation requires FIPS 140-3 HSM signature confirmation.
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low text-on-surface">
+<input checked="" class="w-4 h-4 rounded text-primary-container focus:ring-0 cursor-pointer" id="hsm-confirm" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface cursor-pointer select-none" for="hsm-confirm">
+            I confirm that statutory board approval &amp; legal assignment documentation are verified under SEC and SEBI compliance guidelines.
+          </label>
+</div>
+</div>
+<!-- Card 3: Post-Transfer Success State Simulation / Preview Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-sm" id="transfer-preview-card">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Ledger Execution Preview</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-code-sm text-code-sm font-semibold">Target State</span>
+</div>
+<div class="flex items-start gap-3 p-3.5 rounded-lg bg-surface-container-high text-on-surface">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">task_alt</span>
+<div class="flex flex-col gap-1">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Ownership transferred successfully.</span>
+<div class="grid grid-cols-2 gap-x-4 gap-y-1 font-body-sm text-body-sm mt-1">
+<span class="text-on-surface-variant">Transaction Ref:</span>
+<span class="font-code-sm text-code-sm font-semibold text-on-surface">TX-8F21A9</span>
+<span class="text-on-surface-variant">Merkle Commitment:</span>
+<span class="font-code-sm text-code-sm font-semibold text-on-surface">Block #18,294,003</span>
+<span class="text-on-surface-variant">New Registered State:</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">XYZ Ltd (ORG-XYZ-001)</span>
+<span class="text-on-surface-variant">Execution Timestamp:</span>
+<span class="font-code-sm text-code-sm text-on-surface">14 Oct 2025, 12:45:10 UTC</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Actions Footer / Bottom Bar -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-3 max-w-2xl text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[20px] text-outline flex-shrink-0">gavel</span>
+<span>
+        Transfer executed under <strong class="text-on-surface font-semibold">ERC-3643 permissioned asset transfer standards</strong>. No fiat payment or cryptocurrency settlement is processed on this ledger; transfer records pure legal beneficial entitlement.
+      </span>
+</div>
+<div class="flex items-center gap-space-sm w-full md:w-auto justify-end">
+<button class="px-5 h-10 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container font-label-md text-label-md font-medium transition-colors" type="button">
+        Cancel
+      </button>
+<button class="px-6 h-10 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md font-semibold transition-all shadow-sm flex items-center gap-2" id="btn-execute-transfer" type="button">
+<span>Execute Smart Contract Transfer</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</section>
+</div>
+<script>
+  (function initTransferInteractions() {
+    const btnExecute = document.getElementById('btn-execute-transfer');
+    const previewCard = document.getElementById('transfer-preview-card');
+
+    if (btnExecute && previewCard) {
+      btnExecute.addEventListener('click', function() {
+        btnExecute.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">refresh</span><span>Submitting HSM Witness...</span>';
+        btnExecute.disabled = true;
+
+        setTimeout(() => {
+          btnExecute.innerHTML = '<span class="material-symbols-outlined text-[16px]">done</span><span>Ledger Updated</span>';
+          btnExecute.classList.remove('bg-primary-container');
+          btnExecute.classList.add('bg-tertiary-container');
+          
+          previewCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          previewCard.classList.add('ring-2', 'ring-primary');
+          setTimeout(() => previewCard.classList.remove('ring-2', 'ring-primary'), 2400);
+        }, 1200);
+      });
+    }
+  })();
+</script></main></div></body></html>

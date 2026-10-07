@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"secondary":"#565e74","on-error":"#ffffff","secondary-fixed-dim":"#bec6e0","tertiary-fixed-dim":"#93ccff","surface-container-lowest":"#ffffff","tertiary":"#004870","on-tertiary":"#ffffff","inverse-surface":"#213145","primary":"#0037b0","on-tertiary-container":"#b2d9ff","secondary-container":"#dae2fd","outline-variant":"#c4c5d7","on-tertiary-fixed-variant":"#004b73","on-primary-fixed":"#001551","inverse-on-surface":"#eaf1ff","on-secondary":"#ffffff","surface-variant":"#d3e4fe","on-background":"#0b1c30","surface-container-high":"#dce9ff","surface":"#f8f9ff","background":"#f8f9ff","surface-container-highest":"#d3e4fe","on-primary-fixed-variant":"#0039b5","error-container":"#ffdad6","secondary-fixed":"#dae2fd","surface-container":"#e5eeff","on-error-container":"#93000a","on-secondary-fixed":"#131b2e","on-secondary-container":"#5c647a","primary-fixed":"#dce1ff","surface-dim":"#cbdbf5","on-tertiary-fixed":"#001d31","primary-container":"#1d4ed8","error":"#ba1a1a","outline":"#747686","on-primary-container":"#cad3ff","inverse-primary":"#b7c4ff","surface-tint":"#2151da","surface-bright":"#f8f9ff","primary-fixed-dim":"#b7c4ff","tertiary-fixed":"#cce5ff","on-secondary-fixed-variant":"#3f465c","surface-container-low":"#eff4ff","tertiary-container":"#006194","on-surface":"#0b1c30","on-surface-variant":"#434655","on-primary":"#ffffff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter-sm":"1rem","space-lg":"1.5rem","margin":"2rem","gutter":"1.5rem","space-sm":"0.5rem","space-md":"1rem","margin-sm":"1rem","space-xl":"2.5rem","space-xs":"0.25rem"},"fontFamily":{"display-lg-mobile":["Geist"],"body-sm":["Inter"],"code-sm":["Geist"],"body-lg":["Inter"],"headline-md":["Geist"],"headline-lg":["Geist"],"body-md":["Inter"],"headline-sm":["Geist"],"display-lg":["Geist"],"label-md":["Inter"],"headline-lg-mobile":["Geist"],"label-sm":["Inter"]},"fontSize":{"display-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.005em","fontWeight":"400"}],"code-sm":["12px",{"lineHeight":"16px","letterSpacing":"0em","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-lg":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"600"}],"label-md":["13px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface text-on-surface font-body-md text-body-md"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-margin-sm lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[26px]">verified_user</span><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-bold">AssetProof</span><span class="font-label-sm text-label-sm uppercase px-space-xs py-0.5 rounded bg-surface-container text-secondary font-semibold ml-space-xs">Public</span></div><div class="hidden md:flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-low text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span class="font-label-sm text-label-sm">Public Attestation Gateway • 256-bit Cryptographic Proof</span></div></div><nav class="hidden md:flex items-center gap-space-md" data-active-classes="bg-primary-container text-on-primary font-medium rounded-lg"><a aria-current="page" class="px-space-sm py-1.5 transition-colors bg-primary-container text-on-primary font-medium rounded-lg" data-path="verify-record" href="#">Verify Record</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-space-sm py-1.5 rounded transition-colors" data-path="merkle-attestation" href="#">Merkle Proofs</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-space-sm py-1.5 rounded transition-colors" data-path="custodian-registry" href="#">Custodian Registry</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-space-sm py-1.5 rounded transition-colors" data-path="api-docs" href="#">API Spec</a></nav><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<div class="w-full max-w-7xl mx-auto px-margin-sm lg:px-margin py-space-xl">
+<!-- Top Metadata Bar & Public Origin Notice -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-lg">
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface-variant shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-on-surface">Official Public Attestation Record</span>
+<span class="text-secondary font-label-sm text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-secondary">Read-Only</span>
+<span class="text-secondary font-label-sm text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-secondary">Tamper-Evident</span>
+</div>
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-low text-secondary">
+<span class="material-symbols-outlined text-[16px] text-primary">qr_code_scanner</span>
+<span class="font-label-sm text-label-sm">Scanned from QR Code on Physical Instrument</span>
+</div>
+</div>
+<!-- Timestamp & Gateway Meta -->
+<div class="flex items-center gap-space-xs text-secondary font-code-sm text-code-sm">
+<span class="material-symbols-outlined text-[15px]">schedule</span>
+<span>Gateway Sync: 12 Mar 2026, 14:38:09 UTC</span>
+</div>
+</div>
+<!-- Page Title Header -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg mb-space-xl pb-space-lg">
+<div>
+<div class="flex items-center gap-space-sm mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Public Verification Gateway</span>
+<span class="font-label-sm text-label-sm text-secondary">/</span>
+<span class="font-label-sm text-label-sm text-secondary">RWA-INV-001</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight font-bold">Verify Asset</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-1">View the cryptographically verified public record for this real-world asset.</p>
+</div>
+<!-- Quick Action Controls -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="inline-flex items-center gap-space-xs h-10 px-space-md rounded-lg bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container transition-all" id="copyUrlBtn">
+<span class="material-symbols-outlined text-[18px] text-primary">share</span>
+<span class="font-label-md text-label-md">Share Link</span>
+</button>
+<button class="inline-flex items-center gap-space-xs h-10 px-space-md rounded-lg bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container transition-all" id="downloadPdfBtn">
+<span class="material-symbols-outlined text-[18px] text-primary">download</span>
+<span class="font-label-md text-label-md">Download Certificate (PDF)</span>
+</button>
+<a class="inline-flex items-center gap-space-xs h-10 px-space-md rounded-lg bg-primary text-on-primary shadow-sm hover:bg-primary-container transition-all" href="#history">
+<span class="font-label-md text-label-md">View Ledger History</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- MAIN STATUS HERO EMBLEM -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm mb-space-xl relative overflow-hidden">
+<!-- Decorative geometric security watermark SVG -->
+<div class="absolute right-0 top-0 translate-x-8 -translate-y-8 pointer-events-none opacity-[0.04]">
+<svg fill="none" height="340" viewbox="0 0 200 200" width="340">
+<circle cx="100" cy="100" r="95" stroke="currentColor" stroke-dasharray="4 2" stroke-width="2"></circle>
+<circle cx="100" cy="100" r="75" stroke="currentColor" stroke-width="1.5"></circle>
+<polygon points="100,20 180,65 180,155 100,200 20,155 20,65" stroke="currentColor" stroke-width="1.5"></polygon>
+<path d="M70 100 L90 120 L135 75" stroke="currentColor" stroke-linecap="round" stroke-width="8"></path>
+</svg>
+</div>
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-lg relative z-10">
+<!-- Verification Emblem & Core Trust Status -->
+<div class="flex items-center gap-space-lg">
+<div class="w-20 h-20 rounded-full bg-secondary-container/60 flex items-center justify-center shrink-0 shadow-sm relative">
+<span class="material-symbols-outlined text-primary text-[44px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-sm">
+<span class="w-3.5 h-3.5 rounded-full bg-primary"></span>
+</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-space-sm mb-1">
+<span class="px-space-sm py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold uppercase tracking-wide flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Cryptographic Consensus Confirmed
+              </span>
+<span class="font-label-sm text-label-sm text-secondary">Verified Record</span>
+</div>
+<div class="flex items-baseline gap-space-sm">
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">VERIFIED</h2>
+<span class="font-body-md text-body-md text-secondary">Active Ledger State</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex flex-wrap items-center gap-x-space-md gap-y-1">
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">event_available</span>
+                Last Attestation: <strong class="text-on-surface">12 Mar 2026, 09:14 UTC</strong>
+</span>
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">gavel</span>
+                Authority: <strong class="text-on-surface">Apex Custody Corp & AssetProof Network Consensus</strong>
+</span>
+</p>
+</div>
+</div>
+<!-- Verification Snapshot Metrics -->
+<div class="w-full lg:w-auto grid grid-cols-2 sm:grid-cols-3 gap-space-md pt-space-md lg:pt-0">
+<div class="bg-surface-container-low p-space-md rounded-lg">
+<span class="font-label-sm text-label-sm text-secondary uppercase block mb-1">Audit Score</span>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">100 / 100</span>
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary block mt-0.5">Zero Flags</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg">
+<span class="font-label-sm text-label-sm text-secondary uppercase block mb-1">Ledger Height</span>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold">#18,294,004</div>
+<span class="font-body-sm text-body-sm text-secondary block mt-0.5">Finalized</span>
+</div>
+<div class="col-span-2 sm:col-span-1 bg-surface-container-low p-space-md rounded-lg">
+<span class="font-label-sm text-label-sm text-secondary uppercase block mb-1">HSM Assurance</span>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">FIPS 140-3</div>
+<span class="font-body-sm text-body-sm text-secondary block mt-0.5">Level 3 Witnessed</span>
+</div>
+</div>
+</div>
+</div>
+<!-- MAIN BENTO GRID: CREDENTIALS & HARDWARE INTEGRITY -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mb-space-xl">
+<!-- Asset Identity & Institutional Credentials (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between gap-space-md pb-space-md mb-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Asset Passport</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">ABC Supply Invoice</h3>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-sm py-1 rounded bg-secondary-container text-on-secondary-fixed font-code-sm text-code-sm font-semibold">INV-001</span>
+<span class="px-space-sm py-1 rounded bg-surface-container text-secondary font-label-sm text-label-sm">Series 2025-A</span>
+</div>
+</div>
+<!-- Structured Credentials Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="bg-surface-container-low p-space-md rounded-lg">
+<span class="font-label-sm text-label-sm uppercase text-secondary block mb-1">Asset Classification</span>
+<span class="font-body-lg text-body-lg text-on-surface font-semibold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-primary">receipt_long</span>
+                Invoice / Trade Receivables
+              </span>
+<span class="font-body-sm text-body-sm text-secondary block mt-1">Tier-1 Corporate Commercial Paper</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg">
+<span class="font-label-sm text-label-sm uppercase text-secondary block mb-1">Attested Face Value</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">₹40,00,000</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">INR</span>
+</div>
+<span class="font-body-sm text-body-sm text-primary block mt-1">100% Value Confirmed by Custodian</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg">
+<span class="font-label-sm text-label-sm uppercase text-secondary block mb-1">Beneficial Registered Owner</span>
+<span class="font-body-lg text-body-lg text-on-surface font-semibold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-primary">domain</span>
+                ABC Ltd
+              </span>
+<span class="font-code-sm text-code-sm text-secondary block mt-1">LEI: 5493001KJTIIG284729</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg">
+<span class="font-label-sm text-label-sm uppercase text-secondary block mb-1">Current Lifecycle Status</span>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded bg-secondary-container text-primary font-label-md text-label-md font-bold uppercase">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                  Active
+                </span>
+<span class="font-body-sm text-body-sm text-secondary">In Fiduciary Lock</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary block mt-2">Unencumbered • Fully Solvent</span>
+</div>
+</div>
+<!-- Digital Token Standard Info -->
+<div class="mt-space-md p-space-md rounded-lg bg-surface-container-low flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded bg-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[22px]">token</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase text-secondary block">Digital Asset Identifier</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">RWA-INV-001</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-sm py-1.5 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">shield_locked</span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">ERC-3643 Permissioned Standard</span>
+</div>
+</div>
+<!-- Canonical Fingerprint Card -->
+<div class="mt-space-md p-space-md rounded-lg bg-surface-container">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">fingerprint</span>
+                Canonical Asset Fingerprint (SHA-256)
+              </span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Zero Collision Verification</span>
+</div>
+<div class="flex items-center justify-between gap-space-sm bg-surface-container-lowest p-space-sm rounded shadow-sm">
+<code class="font-code-sm text-code-sm text-on-surface font-medium truncate select-all" id="fullHash">
+                A83F92D1C47E8A91F32BD60B8E12C45902B7319E4A98205C9F1043818362D9817C21
+              </code>
+<button class="shrink-0 p-1.5 rounded hover:bg-surface-container transition-colors text-primary" id="copyHashBtn" title="Copy Fingerprint Hash">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-space-xs">
+              This mathematical hash represents the immutable state of verified asset metadata and title deed records deposited in the vault.
+            </p>
+</div>
+</div>
+<!-- Verified Custodian Profile Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Vaulting & Custody Agent</span>
+<span class="px-space-sm py-0.5 rounded bg-primary-fixed text-primary font-label-sm text-label-sm font-semibold">Licensed Custodian</span>
+</div>
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[28px]">account_balance</span>
+</div>
+<div class="flex-1">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Apex Custody Corp</h4>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">
+                Regulated Qualified Custodian • SEC / FinCEN Registered • Singapore Monetary Authority MAS CMS License
+              </p>
+<div class="flex flex-wrap items-center gap-space-md mt-space-sm text-secondary font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">verified</span>
+                  Depository ID: <strong class="text-on-surface">APX-SG-88219</strong>
+</span>
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">check_circle</span>
+                  Physical Title Held in Cold Vault #4
+                </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Merkle Proofs & Cryptographic Anchors (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- Cryptographic Proof Panel -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-md mb-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Ledger Commitments</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Cryptographic Proof</h3>
+</div>
+<span class="material-symbols-outlined text-primary text-[24px]">hub</span>
+</div>
+<!-- Proof Attributes -->
+<div class="flex flex-col gap-space-md">
+<div class="p-space-md rounded-lg bg-surface-container-low">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm uppercase text-secondary">SHA-256 Merkle Root Commitment</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Tree Depth: 16</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-lowest px-space-sm py-1.5 rounded shadow-sm">
+<span class="font-code-sm text-code-sm text-on-surface font-medium truncate">
+                  0x7fa2b9d01e4a88ac21c900bb3918a
+                </span>
+<span class="material-symbols-outlined text-primary text-[16px]">lock</span>
+</div>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm uppercase text-secondary">Distributed Ledger Anchor</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Finalized</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-lowest px-space-sm py-1.5 rounded shadow-sm">
+<span class="font-code-sm text-code-sm text-on-surface font-medium">
+                  Hyperledger Fabric • Block #18,294,004
+                </span>
+<span class="material-symbols-outlined text-primary text-[16px]">deployed_code</span>
+</div>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm uppercase text-secondary">Hardware Security Module</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Tamper-Proof</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-lowest px-space-sm py-1.5 rounded shadow-sm">
+<span class="font-code-sm text-code-sm text-on-surface font-medium truncate">
+                  FIPS 140-3 Level 3 HSM #HSM-902-SG
+                </span>
+<span class="material-symbols-outlined text-primary text-[16px]">memory</span>
+</div>
+</div>
+<!-- Integrity Consensus Callout -->
+<div class="p-space-md rounded-lg bg-secondary-container/40 flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">verified_user</span>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-bold block">Unaltered Ledger State Confirmed</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Zero state discrepancies detected across 12 distributed validating peers. Cryptographic commitments match canonical vault registration.
+                </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Visual Merkle Path Proof Representation -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Attestation Tree Path</span>
+<span class="font-code-sm text-code-sm text-primary">Inclusion Proof: PASS</span>
+</div>
+<!-- Interactive / Visual SVG Merkle Diagram -->
+<div class="w-full bg-surface-container-low p-space-md rounded-lg">
+<svg class="w-full h-36" fill="none" viewbox="0 0 380 140" xmlns="http://www.w3.org/2000/svg">
+<!-- Root Node -->
+<rect class="text-primary-container" fill="currentColor" height="26" rx="4" width="120" x="130" y="8"></rect>
+<text class="text-[10px] font-mono font-bold" fill="#FFFFFF" text-anchor="middle" x="190" y="25">Root: 0x7fa2...918a</text>
+<!-- Connectors Root to Level 1 -->
+<path class="text-secondary" d="M160 34 L90 56" stroke="currentColor" stroke-width="1.5"></path>
+<path class="text-secondary" d="M220 34 L290 56" stroke="currentColor" stroke-width="1.5"></path>
+<!-- Level 1 Nodes -->
+<rect class="text-surface-container-highest" fill="currentColor" height="24" rx="4" width="110" x="35" y="56"></rect>
+<text class="text-[9px] font-mono font-semibold text-on-surface" fill="currentColor" text-anchor="middle" x="90" y="72">Hash L1-A: 0x8a...4b</text>
+<rect class="text-surface-container-highest" fill="currentColor" height="24" rx="4" width="110" x="235" y="56"></rect>
+<text class="text-[9px] font-mono font-semibold text-on-surface" fill="currentColor" text-anchor="middle" x="290" y="72">Hash L1-B: 0x3d...09</text>
+<!-- Connectors Level 1 to Leaf Nodes -->
+<path class="text-secondary" d="M70 80 L40 102" stroke="currentColor" stroke-width="1.5"></path>
+<path class="text-secondary" d="M110 80 L140 102" stroke="currentColor" stroke-width="1.5"></path>
+<path class="text-secondary" d="M270 80 L240 102" stroke="currentColor" stroke-width="1.5"></path>
+<path class="text-secondary" d="M310 80 L340 102" stroke="currentColor" stroke-width="1.5"></path>
+<!-- Leaf Nodes -->
+<rect class="text-surface-container-lowest shadow-sm" fill="currentColor" height="22" rx="4" width="70" x="5" y="102"></rect>
+<text class="text-[8px] font-mono text-secondary" fill="currentColor" text-anchor="middle" x="40" y="117">Leaf #1</text>
+<rect class="text-primary-fixed shadow-sm" fill="currentColor" height="22" rx="4" width="70" x="105" y="102"></rect>
+<text class="text-[8px] font-mono font-bold text-on-primary-fixed" fill="currentColor" text-anchor="middle" x="140" y="117">INV-001 ✓</text>
+<rect class="text-surface-container-lowest shadow-sm" fill="currentColor" height="22" rx="4" width="70" x="205" y="102"></rect>
+<text class="text-[8px] font-mono text-secondary" fill="currentColor" text-anchor="middle" x="240" y="117">Leaf #3</text>
+<rect class="text-surface-container-lowest shadow-sm" fill="currentColor" height="22" rx="4" width="70" x="305" y="102"></rect>
+<text class="text-[8px] font-mono text-secondary" fill="currentColor" text-anchor="middle" x="340" y="117">Leaf #4</text>
+</svg>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm mt-2 pt-2">
+<span>Leaf position: #02 of 16,384</span>
+<span class="text-primary font-semibold">Cryptographically Sealed</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- LIFECYCLE PROGRESSION TRACKER (HORIZONTAL WITH ACCENT STEPPERS) -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm mb-space-xl" id="history">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-lg pb-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Provenance Trail</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Lifecycle Progression & Milestone Attestation</h3>
+</div>
+<div class="inline-flex items-center gap-space-xs text-primary font-label-md text-label-md bg-secondary-container/50 px-space-sm py-1 rounded-full">
+<span class="material-symbols-outlined text-[16px]">history</span>
+<span>5 of 5 Stages Completed</span>
+</div>
+</div>
+<!-- Horizontal Steps Grid -->
+<div class="grid grid-cols-1 md:grid-cols-5 gap-space-md relative">
+<!-- Step 1: Registered -->
+<div class="relative flex flex-col p-space-md rounded-lg bg-surface-container-low transition-all">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-[12px]">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+<span class="font-label-sm text-label-sm text-secondary font-code-sm">Step 01</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">Registered</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold mt-0.5">Completed • 04 Oct 2025</span>
+<p class="font-body-sm text-body-sm text-secondary mt-space-sm">
+            Initial asset ingest & legal entity identification verified by Apex Registry.
+          </p>
+<div class="mt-auto pt-space-sm">
+<span class="font-code-sm text-code-sm text-secondary text-[10px] block truncate">Tx: 0x98a1...3ef2</span>
+</div>
+</div>
+<!-- Step 2: Verified -->
+<div class="relative flex flex-col p-space-md rounded-lg bg-surface-container-low transition-all">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-[12px]">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+<span class="font-label-sm text-label-sm text-secondary font-code-sm">Step 02</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">Verified</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold mt-0.5">Completed • Legal Dossier</span>
+<p class="font-body-sm text-body-sm text-secondary mt-space-sm">
+            Due diligence & counterparty signature verified via zero-knowledge KYC pipeline.
+          </p>
+<div class="mt-auto pt-space-sm">
+<span class="font-code-sm text-code-sm text-secondary text-[10px] block truncate">Doc ID: #DOS-4820-A</span>
+</div>
+</div>
+<!-- Step 3: Valued -->
+<div class="relative flex flex-col p-space-md rounded-lg bg-surface-container-low transition-all">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-[12px]">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+<span class="font-label-sm text-label-sm text-secondary font-code-sm">Step 03</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">Valued</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold mt-0.5">Completed • Knight Frank</span>
+<p class="font-body-sm text-body-sm text-secondary mt-space-sm">
+            Independent institutional valuation attesting receivables at ₹40,00,000 INR.
+          </p>
+<div class="mt-auto pt-space-sm">
+<span class="font-code-sm text-code-sm text-secondary text-[10px] block truncate">Report: #KF-IN-991</span>
+</div>
+</div>
+<!-- Step 4: Tokenized -->
+<div class="relative flex flex-col p-space-md rounded-lg bg-surface-container-low transition-all">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-[12px]">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+<span class="font-label-sm text-label-sm text-secondary font-code-sm">Step 04</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">Tokenized</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold mt-0.5">Completed • Fabric State</span>
+<p class="font-body-sm text-body-sm text-secondary mt-space-sm">
+            Permissioned ERC-3643 digital twin minted & escrowed under fiduciary custodian.
+          </p>
+<div class="mt-auto pt-space-sm">
+<span class="font-code-sm text-code-sm text-secondary text-[10px] block truncate">RWA-INV-001</span>
+</div>
+</div>
+<!-- Step 5: Active (Current State) -->
+<div class="relative flex flex-col p-space-md rounded-lg bg-primary-fixed/50 transition-all shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-[12px] ring-2 ring-primary">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+</span>
+<span class="font-label-sm text-label-sm text-primary font-code-sm font-bold">CURRENT</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">Active</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold mt-0.5">Live Verified State</span>
+<p class="font-body-sm text-body-sm text-secondary mt-space-sm">
+            Consensus confirmed by Apex Custody Corp. Clean standing, no disputes.
+          </p>
+<div class="mt-auto pt-space-sm">
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+              Synchronized
+            </span>
+</div>
+</div>
+</div>
+</div>
+<!-- PUBLIC CERTIFICATE ATTESTATION ACTIONS -->
+<div class="w-full bg-surface-container rounded-xl p-space-lg mb-space-xl flex flex-col md:flex-row items-center justify-between gap-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-xl bg-surface-container-lowest flex items-center justify-center shadow-sm shrink-0">
+<span class="material-symbols-outlined text-primary text-[32px]">workspace_premium</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Need Cryptographic Validation for Audit Dossiers?</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+            Export the signed cryptographic attestation certificate containing Merkle branch proofs and notary signatures.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 w-full md:w-auto">
+<button class="w-full md:w-auto inline-flex items-center justify-center gap-space-xs h-10 px-space-lg rounded-lg bg-primary text-on-primary shadow-sm hover:bg-primary-container transition-all" id="verifyLedgerBtn">
+<span class="material-symbols-outlined text-[18px]">policy</span>
+<span class="font-label-md text-label-md">Run Cryptographic Node Check</span>
+</button>
+</div>
+</div>
+<!-- INSTITUTIONAL FIDUCIARY DISCLAIMER -->
+<div class="w-full max-w-4xl mx-auto p-space-lg rounded-xl bg-surface-container-low text-center">
+<div class="flex items-center justify-center gap-space-xs mb-space-xs text-secondary">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Institutional Fiduciary Disclosure</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+        AssetProof provides a tamper-evident digital record of the asset information registered on the platform. This public record confirms cryptographic proof of registration, valuation attestation, and lifecycle status without disclosing confidential commercial terms or sensitive counterparty data.
+      </p>
+<div class="mt-space-md pt-space-sm flex flex-wrap items-center justify-center gap-space-md text-secondary font-label-sm text-label-sm">
+<span>Asset Record: <strong class="text-on-surface font-mono">verify.assetproof.io/p/RWA-INV-001</strong></span>
+<span>•</span>
+<span>Certificate Signature: <strong class="text-on-surface font-mono">ED25519-Apex-Node-7</strong></span>
+<span>•</span>
+<span>Protocol: <strong class="text-on-surface">AssetProof Core v4.12</strong></span>
+</div>
+</div>
+</div>
+<!-- Notification Toast for Copy Actions -->
+<div class="fixed bottom-6 right-6 z-50 bg-inverse-surface text-inverse-on-surface px-space-md py-space-sm rounded-lg shadow-xl font-label-md text-label-md transition-all duration-300 opacity-0 pointer-events-none translate-y-2 flex items-center gap-space-xs" id="toast">
+<span class="material-symbols-outlined text-tertiary-fixed text-[18px]">check_circle</span>
+<span id="toastMsg">Public record link copied to clipboard</span>
+</div>
+</div>
+<script>
+  (function() {
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toastMsg');
+    let toastTimeout;
+
+    function showToast(message) {
+      if (toastTimeout) clearTimeout(toastTimeout);
+      toastMsg.textContent = message;
+      toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-2');
+      toast.classList.add('opacity-100', 'translate-y-0');
+
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
+      }, 3000);
+    }
+
+    // Copy public link
+    const copyUrlBtn = document.getElementById('copyUrlBtn');
+    if (copyUrlBtn) {
+      copyUrlBtn.addEventListener('click', () => {
+        const url = 'https://verify.assetproof.io/p/RWA-INV-001';
+        navigator.clipboard.writeText(url).then(() => {
+          showToast('Verification URL copied: verify.assetproof.io/p/RWA-INV-001');
+        }).catch(() => {
+          showToast('Verification URL copied to clipboard');
+        });
+      });
+    }
+
+    // Copy full hash
+    const copyHashBtn = document.getElementById('copyHashBtn');
+    const fullHash = document.getElementById('fullHash');
+    if (copyHashBtn && fullHash) {
+      copyHashBtn.addEventListener('click', () => {
+        const hashText = fullHash.textContent.trim();
+        navigator.clipboard.writeText(hashText).then(() => {
+          showToast('Canonical SHA-256 fingerprint copied');
+        }).catch(() => {
+          showToast('Fingerprint copied');
+        });
+      });
+    }
+
+    // Download Certificate mockup
+    const downloadPdfBtn = document.getElementById('downloadPdfBtn');
+    if (downloadPdfBtn) {
+      downloadPdfBtn.addEventListener('click', () => {
+        showToast('Generating official attestation certificate PDF...');
+      });
+    }
+
+    // Run Node check mockup
+    const verifyLedgerBtn = document.getElementById('verifyLedgerBtn');
+    if (verifyLedgerBtn) {
+      verifyLedgerBtn.addEventListener('click', () => {
+        verifyLedgerBtn.disabled = true;
+        const origText = verifyLedgerBtn.innerHTML;
+        verifyLedgerBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span> Validating Merkle nodes...';
+        
+        setTimeout(() => {
+          verifyLedgerBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">verified</span> Node Consensus Validated';
+          showToast('Proof re-verified: 12 of 12 cluster nodes confirmed zero variance.');
+          setTimeout(() => {
+            verifyLedgerBtn.innerHTML = origText;
+            verifyLedgerBtn.disabled = false;
+          }, 3500);
+        }, 1200);
+      });
+    }
+  })();
+</script></main><footer class="w-full bg-surface-container-lowest shadow-[0_-1px_8px_rgba(0,0,0,0.03)] py-space-lg"><div class="max-w-7xl mx-auto px-margin-sm lg:px-margin flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant font-body-sm text-body-sm"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[16px]">lock</span><span>Fiduciary Attestation Engine • SOC2 Type II Certified</span></div><div class="flex items-center gap-space-md"><a class="hover:text-on-surface transition-colors font-label-sm text-label-sm" href="#">Cryptographic Verifier</a><a class="hover:text-on-surface transition-colors font-label-sm text-label-sm" href="#">Audit Ledger</a><a class="hover:text-on-surface transition-colors font-label-sm text-label-sm" href="#">Terms & Fiduciary Disclosures</a></div><div class="flex items-center gap-space-xs font-label-sm text-label-sm text-secondary"><span class="material-symbols-outlined text-[14px]">shield</span><span>Powered by AssetProof Enterprise</span></div></div></footer></body></html>

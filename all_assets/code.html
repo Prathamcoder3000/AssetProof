@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary": "#ffffff", "surface-container-low": "#eff4ff", "surface-container-highest": "#d3e4fe", "on-error-container": "#93000a", "surface": "#f8f9ff", "secondary-fixed-dim": "#bec6e0", "tertiary-fixed-dim": "#93ccff", "on-background": "#0b1c30", "primary-container": "#1d4ed8", "inverse-surface": "#213145", "on-tertiary-fixed": "#001d31", "on-tertiary-fixed-variant": "#004b73", "tertiary": "#004870", "on-tertiary": "#ffffff", "primary-fixed": "#dce1ff", "primary-fixed-dim": "#b7c4ff", "tertiary-container": "#006194", "primary": "#0037b0", "error-container": "#ffdad6", "tertiary-fixed": "#cce5ff", "on-error": "#ffffff", "surface-bright": "#f8f9ff", "on-primary-container": "#cad3ff", "background": "#f8f9ff", "error": "#ba1a1a", "on-surface-variant": "#434655", "on-primary-fixed": "#001551", "secondary-fixed": "#dae2fd", "on-secondary-fixed": "#131b2e", "on-tertiary-container": "#b2d9ff", "on-surface": "#0b1c30", "surface-container-lowest": "#ffffff", "on-secondary-fixed-variant": "#3f465c", "outline": "#747686", "secondary-container": "#dae2fd", "surface-container-high": "#dce9ff", "inverse-primary": "#b7c4ff", "on-primary-fixed-variant": "#0039b5", "on-primary": "#ffffff", "surface-dim": "#cbdbf5", "surface-tint": "#2151da", "secondary": "#565e74", "inverse-on-surface": "#eaf1ff", "surface-container": "#e5eeff", "surface-variant": "#d3e4fe", "outline-variant": "#c4c5d7", "on-secondary-container": "#5c647a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "space-md": "1rem", "space-lg": "1.5rem", "margin-sm": "1rem", "space-xs": "0.25rem", "gutter-sm": "1rem", "space-xl": "2.5rem", "margin": "2rem", "space-sm": "0.5rem" }, "fontFamily": { "body-sm": ["Inter"], "headline-lg": ["Geist"], "headline-lg-mobile": ["Geist"], "display-lg": ["Geist"], "headline-sm": ["Geist"], "body-lg": ["Inter"], "code-sm": ["Geist"], "body-md": ["Inter"], "headline-md": ["Geist"], "label-md": ["Inter"], "display-lg-mobile": ["Geist"], "label-sm": ["Inter"] }, "fontSize": { "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.005em", "fontWeight": "400" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "code-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }], "display-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between select-none"><div class="flex flex-col flex-1 min-h-0"><div class="h-16 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[20px]">verified_user</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight tracking-tight">AssetProof</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Enterprise Console</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">lock</span></div><nav class="flex-1 px-space-md py-space-sm overflow-y-auto flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary rounded-lg"><div class="px-space-sm pt-space-xs pb-1"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Platform Navigation</span></div><a class="flex items-center justify-between px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Overview</span></a><div class="mt-space-xs flex flex-col gap-1"><div class="flex items-center justify-between px-space-sm py-1.5 text-on-surface font-label-md text-label-md font-semibold"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-primary">inventory_2</span><span>Assets</span></div><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></div><div class="pl-8 pr-space-xs flex flex-col gap-space-xs"><a aria-current="page" class="flex items-center justify-between px-space-sm py-1.5 font-label-md shadow-sm transition-colors bg-primary-container text-on-primary rounded-lg" data-path="all-assets" href="#"><span>All Assets</span><span class="font-code-sm text-code-sm px-1.5 py-0.5 rounded bg-surface-container-lowest/20 text-on-primary font-medium">1,428</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="pending-verification" href="#"><span>Pending Verification</span><span class="font-code-sm text-code-sm px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-medium">14</span></a><a class="flex items-center px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="tokenized" href="#"><span>Tokenized</span></a><a class="flex items-center px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="retired" href="#"><span>Retired</span></a></div></div><div class="my-space-xs"></div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="transfers" href="#"><span class="material-symbols-outlined text-[20px]">swap_horiz</span><span>Transfers</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="verification" href="#"><span class="material-symbols-outlined text-[20px]">fact_check</span><span>Verification Ledger</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="asset-passport" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span>Asset Passport</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="activity" href="#"><span class="material-symbols-outlined text-[20px]">history</span><span>Activity Log</span></a><div class="my-space-xs"></div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Console Settings</span></a></nav></div><div class="p-space-md bg-surface-container-low m-space-md rounded-xl flex flex-col gap-2"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Node Telemetry</span><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-code-sm text-code-sm text-on-surface font-semibold">Connected</span></div></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-code-sm text-code-sm font-medium">#0492-East (US-VA)</span><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface font-semibold">FIPS 140-3</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex-1 max-w-xl"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px]">search</span><input class="w-full h-10 pl-10 pr-4 bg-surface-container-low rounded-lg text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container transition-all" placeholder="Search by Asset ID, hash, issuer, or legal entity... (⌘K)" type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-label-sm text-label-sm text-on-surface font-medium">All Nodes Operational</span></div><button aria-label="Notifications" class="relative p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="hidden lg:flex flex-col items-end text-right"><span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Apex Custody Corp</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Admin | Compliance Officer</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen px-gutter py-space-lg"><div class="flex flex-col w-full gap-space-lg">
+<!-- PAGE HEADER -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Institutional Ledger</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant font-medium">/</span>
+<span class="font-code-sm text-code-sm text-primary font-semibold">All Assets Registry</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight">All Assets</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">View and manage every registered real-world asset across verified custodian vaults.</p>
+</div>
+<!-- Right Header Actions -->
+<div class="flex items-center gap-space-sm">
+<button class="h-10 px-4 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md flex items-center gap-2 shadow-sm hover:bg-surface-container-low transition-colors" title="Export Ledger as CSV or JSON audit trail" type="button">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">file_download</span>
+<span>Export CSV / Ledger</span>
+</button>
+<button class="h-10 px-4 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md flex items-center gap-2 shadow-sm hover:opacity-95 transition-opacity" title="Register New Institutional Asset" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Register Asset</span>
+</button>
+</div>
+</div>
+<!-- SUMMARY STATS / METRICS BAR -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Stat 1: Total Registered -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Total Registered</span>
+<span class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">account_balance_wallet</span>
+</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-on-surface tracking-tight font-semibold">12</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Assets</span>
+</div>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="font-code-sm text-code-sm text-on-surface-variant font-medium">Portfolio Val:</span>
+<span class="font-code-sm text-code-sm font-semibold text-on-surface">₹1,78,50,000</span>
+</div>
+</div>
+</div>
+<!-- Stat 2: Verified -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Attested &amp; Verified</span>
+<span class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-on-surface tracking-tight font-semibold">9</span>
+<span class="font-label-md text-label-md text-on-surface-variant">75% Ratio</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 75%"></div>
+</div>
+</div>
+</div>
+<!-- Stat 3: Pending Audit -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Pending Audit</span>
+<span class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[18px]">pending_actions</span>
+</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-on-surface tracking-tight font-semibold">1</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Under Review</span>
+</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-body-sm text-body-sm">Assay Lab Testing (COP-003)</span>
+</div>
+</div>
+</div>
+<!-- Stat 4: Retired / Settled -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Retired / Settled</span>
+<span class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">archive</span>
+</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-on-surface tracking-tight font-semibold">2</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Burned / Matured</span>
+</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant">
+<span class="font-code-sm text-code-sm font-medium">₹75,00,000 Total Settled</span>
+</div>
+</div>
+</div>
+</div>
+<!-- TOP CONTROLS & FILTER BAR -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
+<!-- Search Field -->
+<div class="relative flex-1 max-w-lg">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full h-10 pl-10 pr-4 bg-surface-container-low rounded-lg text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container transition-all" id="asset-search-input" placeholder="Search by Asset ID, title, owner, or hash... (Press / to focus)" type="text"/>
+</div>
+<!-- Action buttons right -->
+<div class="flex items-center gap-space-sm justify-end">
+<button class="h-10 px-3 text-on-surface-variant hover:text-primary font-label-md text-label-md flex items-center gap-1 transition-colors" id="reset-filters-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+<span>Reset Filters</span>
+</button>
+<div class="w-px h-6 bg-surface-container-high"></div>
+<button class="p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Column Display Settings" type="button">
+<span class="material-symbols-outlined text-[20px]">view_column</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Toggle Compact View" type="button">
+<span class="material-symbols-outlined text-[20px]">density_medium</span>
+</button>
+</div>
+</div>
+<!-- Filter Pills / Dropdowns Row -->
+<div class="flex flex-wrap items-center gap-2 pt-1">
+<!-- Dropdown 1: Asset Type -->
+<div class="relative">
+<select class="appearance-none h-9 pl-3 pr-8 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md cursor-pointer hover:bg-surface-container focus:outline-none focus:ring-1 focus:ring-primary-container">
+<option>All Types</option>
+<option>Invoices</option>
+<option>Land &amp; Real Estate</option>
+<option>Commodities</option>
+<option>Equipment Lease</option>
+<option>Private Credit</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2 pointer-events-none text-on-surface-variant text-[16px]">expand_more</span>
+</div>
+<!-- Dropdown 2: Verification Status -->
+<div class="relative">
+<select class="appearance-none h-9 pl-3 pr-8 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md cursor-pointer hover:bg-surface-container focus:outline-none focus:ring-1 focus:ring-primary-container">
+<option>All Verification</option>
+<option>Verified (9)</option>
+<option>Pending Verification (1)</option>
+<option>Under Audit</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2 pointer-events-none text-on-surface-variant text-[16px]">expand_more</span>
+</div>
+<!-- Dropdown 3: Lifecycle Status -->
+<div class="relative">
+<select class="appearance-none h-9 pl-3 pr-8 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md cursor-pointer hover:bg-surface-container focus:outline-none focus:ring-1 focus:ring-primary-container">
+<option>All Statuses</option>
+<option>Active (7)</option>
+<option>Pending (1)</option>
+<option>Retired (2)</option>
+<option>Tokenized</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2 pointer-events-none text-on-surface-variant text-[16px]">expand_more</span>
+</div>
+<!-- Dropdown 4: Owner / Custodian -->
+<div class="relative">
+<select class="appearance-none h-9 pl-3 pr-8 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md cursor-pointer hover:bg-surface-container focus:outline-none focus:ring-1 focus:ring-primary-container">
+<option>All Owners</option>
+<option>ABC Ltd</option>
+<option>GreenField Ltd</option>
+<option>MetalWorks Ltd</option>
+<option>TerraFleet Logistics</option>
+<option>Oceanic Freight Corp</option>
+<option>Sovereign Trust</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2 pointer-events-none text-on-surface-variant text-[16px]">expand_more</span>
+</div>
+<!-- Active Filter Badge Sample -->
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Network:</span>
+<span class="font-semibold">Mainnet Node #0492</span>
+<button class="hover:text-primary transition-colors leading-none" title="Remove filter">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</span>
+</div>
+</div>
+<!-- MAIN ENTERPRISE DATA TABLE CONTAINER -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Table Wrapper with horizontal scroll safety -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<!-- Table Header -->
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="w-12 px-4 py-3 text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary-container cursor-pointer" id="select-all-checkbox" type="checkbox"/>
+</th>
+<th class="px-4 py-3 font-semibold">Asset ID</th>
+<th class="px-4 py-3 font-semibold">Asset Name &amp; Description</th>
+<th class="px-4 py-3 font-semibold">Type</th>
+<th class="px-4 py-3 font-semibold text-right">Value (INR)</th>
+<th class="px-4 py-3 font-semibold">Legal Owner</th>
+<th class="px-4 py-3 font-semibold">Verification</th>
+<th class="px-4 py-3 font-semibold">Lifecycle</th>
+<th class="px-4 py-3 font-semibold">Updated</th>
+<th class="px-4 py-3 font-semibold text-right">Actions</th>
+</tr>
+</thead>
+<!-- Table Body -->
+<tbody class="font-body-md text-body-md text-on-surface divide-y divide-surface-container-low">
+<!-- Row 1: INV-001 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group cursor-pointer" onclick="window.location.href='#asset-passport?id=INV-001'">
+<td class="px-4 py-3.5 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-center gap-1.5">
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded bg-surface-container-high text-primary font-semibold">INV-001</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors opacity-0 group-hover:opacity-100" onclick="event.stopPropagation(); navigator.clipboard.writeText('INV-001'); alert('Copied INV-001');" title="Copy Asset ID" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+</button>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">ABC Supply Invoice</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Series A-4 Commercial Invoice</span>
+</div>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-medium">Invoice</span>
+</td>
+<td class="px-4 py-3.5 text-right">
+<span class="font-code-sm text-code-sm font-semibold text-on-surface">₹40,00,000</span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-medium text-on-surface">ABC Ltd</span>
+<span class="material-symbols-outlined text-primary text-[16px]" title="Attested Legal Entity">verified</span>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Verified</span>
+</span>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center px-2 py-0.5 rounded-md bg-surface-container text-primary font-label-sm text-label-sm font-medium">Active</span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">12m ago</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">#node-0492</span>
+</div>
+</td>
+<td class="px-4 py-3.5 text-right" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<a class="font-label-sm text-label-sm text-primary hover:underline font-semibold mr-1" href="#asset-passport?id=INV-001">Passport</a>
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="More options" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: LAND-002 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group cursor-pointer" onclick="window.location.href='#asset-passport?id=LAND-002'">
+<td class="px-4 py-3.5 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-center gap-1.5">
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded bg-surface-container-high text-primary font-semibold">LAND-002</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors opacity-0 group-hover:opacity-100" onclick="event.stopPropagation(); navigator.clipboard.writeText('LAND-002'); alert('Copied LAND-002');" title="Copy Asset ID" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+</button>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">landscape</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">Commercial Land Parcel</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">7.4 Acres Tech Corridor Plot</span>
+</div>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-medium">Land</span>
+</td>
+<td class="px-4 py-3.5 text-right">
+<span class="font-code-sm text-code-sm font-semibold text-on-surface">₹1,20,00,000</span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-medium text-on-surface">GreenField Ltd</span>
+<span class="material-symbols-outlined text-primary text-[16px]" title="Attested Legal Entity">verified</span>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Verified</span>
+</span>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center px-2 py-0.5 rounded-md bg-surface-container text-primary font-label-sm text-label-sm font-medium">Active</span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">2h ago</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">#node-0118</span>
+</div>
+</td>
+<td class="px-4 py-3.5 text-right" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<a class="font-label-sm text-label-sm text-primary hover:underline font-semibold mr-1" href="#asset-passport?id=LAND-002">Passport</a>
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: COP-003 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group cursor-pointer" onclick="window.location.href='#asset-passport?id=COP-003'">
+<td class="px-4 py-3.5 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-center gap-1.5">
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded bg-surface-container-high text-primary font-semibold">COP-003</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors opacity-0 group-hover:opacity-100" onclick="event.stopPropagation(); navigator.clipboard.writeText('COP-003'); alert('Copied COP-003');" title="Copy Asset ID" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+</button>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">inventory</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">Copper Commodity Batch</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Grade A Electrolytic 50MT</span>
+</div>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-medium">Commodity</span>
+</td>
+<td class="px-4 py-3.5 text-right">
+<span class="font-code-sm text-code-sm font-semibold text-on-surface">₹18,50,000</span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-medium text-on-surface">MetalWorks Ltd</span>
+<span class="material-symbols-outlined text-primary text-[16px]" title="Attested Legal Entity">verified</span>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">schedule</span>
+<span>Pending Audit</span>
+</span>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-medium">Pending</span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">1d ago</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">#node-0774</span>
+</div>
+</td>
+<td class="px-4 py-3.5 text-right" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<a class="font-label-sm text-label-sm text-primary hover:underline font-semibold mr-1" href="#asset-passport?id=COP-003">Passport</a>
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: EQUIP-004 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group cursor-pointer" onclick="window.location.href='#asset-passport?id=EQUIP-004'">
+<td class="px-4 py-3.5 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-center gap-1.5">
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded bg-surface-container-high text-primary font-semibold">EQUIP-004</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors opacity-0 group-hover:opacity-100" onclick="event.stopPropagation(); navigator.clipboard.writeText('EQUIP-004'); alert('Copied EQUIP-004');" title="Copy Asset ID" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+</button>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">precision_manufacturing</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">Heavy Mining Excavator Lease</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">CAT 349 Hex Fleet</span>
+</div>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-medium">Equipment</span>
+</td>
+<td class="px-4 py-3.5 text-right">
+<span class="font-code-sm text-code-sm font-semibold text-on-surface">₹65,00,000</span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-medium text-on-surface">TerraFleet Logistics</span>
+<span class="material-symbols-outlined text-primary text-[16px]" title="Attested Legal Entity">verified</span>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Verified</span>
+</span>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center px-2 py-0.5 rounded-md bg-surface-container text-primary font-label-sm text-label-sm font-medium">Active</span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">2d ago</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">#node-0492</span>
+</div>
+</td>
+<td class="px-4 py-3.5 text-right" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<a class="font-label-sm text-label-sm text-primary hover:underline font-semibold mr-1" href="#asset-passport?id=EQUIP-004">Passport</a>
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: INV-005 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group cursor-pointer" onclick="window.location.href='#asset-passport?id=INV-005'">
+<td class="px-4 py-3.5 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-center gap-1.5">
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded bg-surface-container-high text-primary font-semibold">INV-005</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors opacity-0 group-hover:opacity-100" onclick="event.stopPropagation(); navigator.clipboard.writeText('INV-005'); alert('Copied INV-005');" title="Copy Asset ID" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+</button>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">Freight Logistics Receivables</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Q3 Maritime Shipping Cargo</span>
+</div>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-medium">Invoice</span>
+</td>
+<td class="px-4 py-3.5 text-right">
+<span class="font-code-sm text-code-sm font-semibold text-on-surface">₹22,00,000</span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-medium text-on-surface">Oceanic Freight Corp</span>
+<span class="material-symbols-outlined text-primary text-[16px]" title="Attested Legal Entity">verified</span>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Verified</span>
+</span>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center px-2 py-0.5 rounded-md bg-surface-container text-primary font-label-sm text-label-sm font-medium">Active</span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">3d ago</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">#node-0301</span>
+</div>
+</td>
+<td class="px-4 py-3.5 text-right" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<a class="font-label-sm text-label-sm text-primary hover:underline font-semibold mr-1" href="#asset-passport?id=INV-005">Passport</a>
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: BOND-006 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group cursor-pointer" onclick="window.location.href='#asset-passport?id=BOND-006'">
+<td class="px-4 py-3.5 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-center gap-1.5">
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded bg-surface-container-high text-primary font-semibold">BOND-006</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors opacity-0 group-hover:opacity-100" onclick="event.stopPropagation(); navigator.clipboard.writeText('BOND-006'); alert('Copied BOND-006');" title="Copy Asset ID" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+</button>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">solar_power</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">Municipal Solar Infrastructure Bond</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Custodian Attested Series II</span>
+</div>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-medium">Private Credit</span>
+</td>
+<td class="px-4 py-3.5 text-right">
+<span class="font-code-sm text-code-sm font-semibold text-on-surface">₹85,00,000</span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-medium text-on-surface">HelioEnergy Trust</span>
+<span class="material-symbols-outlined text-primary text-[16px]" title="Attested Legal Entity">verified</span>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Verified</span>
+</span>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center px-2 py-0.5 rounded-md bg-surface-container text-primary font-label-sm text-label-sm font-medium">Active</span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">4d ago</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">#node-0492</span>
+</div>
+</td>
+<td class="px-4 py-3.5 text-right" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<a class="font-label-sm text-label-sm text-primary hover:underline font-semibold mr-1" href="#asset-passport?id=BOND-006">Passport</a>
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 7: RET-007 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group cursor-pointer" onclick="window.location.href='#asset-passport?id=RET-007'">
+<td class="px-4 py-3.5 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-center gap-1.5">
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-semibold">RET-007</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors opacity-0 group-hover:opacity-100" onclick="event.stopPropagation(); navigator.clipboard.writeText('RET-007'); alert('Copied RET-007');" title="Copy Asset ID" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+</button>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">agriculture</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">2023 Agricultural Crop Collateral</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Audited &amp; Matured Contract</span>
+</div>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-medium">Commodity</span>
+</td>
+<td class="px-4 py-3.5 text-right">
+<span class="font-code-sm text-code-sm font-semibold text-on-surface-variant">₹30,00,000</span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-medium text-on-surface">AgriYield Consortium</span>
+<span class="material-symbols-outlined text-primary text-[16px]" title="Attested Legal Entity">verified</span>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Verified</span>
+</span>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-medium">Retired</span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">1w ago</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">#node-0082</span>
+</div>
+</td>
+<td class="px-4 py-3.5 text-right" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<a class="font-label-sm text-label-sm text-primary hover:underline font-semibold mr-1" href="#asset-passport?id=RET-007">Passport</a>
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 8: RET-008 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group cursor-pointer" onclick="window.location.href='#asset-passport?id=RET-008'">
+<td class="px-4 py-3.5 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-center gap-1.5">
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-semibold">RET-008</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors opacity-0 group-hover:opacity-100" onclick="event.stopPropagation(); navigator.clipboard.writeText('RET-008'); alert('Copied RET-008');" title="Copy Asset ID" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+</button>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">commute</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">Commercial Fleet Lease #802</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Covenant Closed &amp; Settled</span>
+</div>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-medium">Equipment</span>
+</td>
+<td class="px-4 py-3.5 text-right">
+<span class="font-code-sm text-code-sm font-semibold text-on-surface-variant">₹45,00,000</span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-medium text-on-surface">Metro Haulage Ltd</span>
+<span class="material-symbols-outlined text-primary text-[16px]" title="Attested Legal Entity">verified</span>
+</div>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Verified</span>
+</span>
+</td>
+<td class="px-4 py-3.5">
+<span class="inline-flex items-center px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-medium">Retired</span>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface">2w ago</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">#node-0492</span>
+</div>
+</td>
+<td class="px-4 py-3.5 text-right" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<a class="font-label-sm text-label-sm text-primary hover:underline font-semibold mr-1" href="#asset-passport?id=RET-008">Passport</a>
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- REALISTIC INSTITUTIONAL PAGINATION BAR -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<!-- Left side: counts & rows per page -->
+<div class="flex items-center gap-space-md flex-wrap">
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+          Showing <span class="font-semibold text-on-surface">1</span> to <span class="font-semibold text-on-surface">8</span> of <span class="font-semibold text-on-surface">12</span> registered assets
+        </span>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Rows per page:</span>
+<select class="h-8 px-2 rounded bg-surface-container-lowest text-on-surface font-code-sm text-code-sm border-none focus:outline-none focus:ring-1 focus:ring-primary-container">
+<option>10</option>
+<option>25</option>
+<option>50</option>
+</select>
+</div>
+</div>
+<!-- Right side: page controls -->
+<div class="flex items-center gap-1">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md opacity-50 cursor-not-allowed flex items-center gap-1" disabled="" type="button">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+<span>Previous</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-primary-container text-on-primary font-code-sm text-code-sm font-semibold flex items-center justify-center" type="button">1</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-high font-code-sm text-code-sm font-medium flex items-center justify-center transition-colors" type="button">2</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md flex items-center gap-1 transition-colors" type="button">
+<span>Next</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- CONSOLE AUDIT LOG OVERVIEW FOOTER COMPONENT -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">verified_user</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Cryptographic Merkle Root Attestation</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Root 0x7fa2b...9d01 valid across all 12 asset state trees</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Auto-sync active (30s)</span>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:underline font-semibold" onclick="alert('Merkle State Tree verified successfully. Zero inconsistencies found.')" type="button">
+        Verify Merkle Proof
+      </button>
+</div>
+</div>
+</div>
+<script>
+  // Simple table interaction logic
+  document.addEventListener('DOMContentLoaded', () => {
+    const selectAll = document.getElementById('select-all-checkbox');
+    const checkboxes = document.querySelectorAll('.row-checkbox');
+    const searchInput = document.getElementById('asset-search-input');
+    const resetBtn = document.getElementById('reset-filters-btn');
+
+    if (selectAll) {
+      selectAll.addEventListener('change', (e) => {
+        checkboxes.forEach(cb => cb.checked = e.target.checked);
+      });
+    }
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        if (searchInput) searchInput.value = '';
+        const selects = document.querySelectorAll('select');
+        selects.forEach(s => s.selectedIndex = 0);
+        if (selectAll) selectAll.checked = false;
+        checkboxes.forEach(cb => cb.checked = false);
+      });
+    }
+
+    // Keyboard shortcut '/' to focus search
+    window.addEventListener('keydown', (e) => {
+      if (e.key === '/' && document.activeElement !== searchInput) {
+        e.preventDefault();
+        if (searchInput) searchInput.focus();
+      }
+    });
+  });
+</script></main></div></body></html>

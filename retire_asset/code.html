@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed": "#cce5ff", "on-tertiary-fixed": "#001d31", "on-secondary-fixed": "#131b2e", "on-secondary": "#ffffff", "on-surface-variant": "#434655", "surface-container-low": "#eff4ff", "surface-variant": "#d3e4fe", "outline-variant": "#c4c5d7", "primary-container": "#1d4ed8", "on-secondary-container": "#5c647a", "surface-bright": "#f8f9ff", "outline": "#747686", "tertiary-container": "#006194", "surface-container-high": "#dce9ff", "surface-container-lowest": "#ffffff", "tertiary-fixed-dim": "#93ccff", "background": "#f8f9ff", "surface-dim": "#cbdbf5", "inverse-primary": "#b7c4ff", "on-primary-fixed-variant": "#0039b5", "on-error-container": "#93000a", "secondary-fixed-dim": "#bec6e0", "primary-fixed-dim": "#b7c4ff", "surface-container-highest": "#d3e4fe", "secondary-fixed": "#dae2fd", "on-tertiary": "#ffffff", "on-primary-container": "#cad3ff", "on-error": "#ffffff", "tertiary": "#004870", "on-tertiary-container": "#b2d9ff", "on-primary": "#ffffff", "primary-fixed": "#dce1ff", "error": "#ba1a1a", "error-container": "#ffdad6", "surface-tint": "#2151da", "on-tertiary-fixed-variant": "#004b73", "surface": "#f8f9ff", "inverse-on-surface": "#eaf1ff", "on-surface": "#0b1c30", "on-primary-fixed": "#001551", "surface-container": "#e5eeff", "inverse-surface": "#213145", "secondary": "#565e74", "primary": "#0037b0", "on-secondary-fixed-variant": "#3f465c", "secondary-container": "#dae2fd", "on-background": "#0b1c30" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "gutter": "1.5rem", "gutter-sm": "1rem", "space-xl": "2.5rem", "margin-sm": "1rem", "space-xs": "0.25rem", "space-md": "1rem", "margin": "2rem", "space-lg": "1.5rem" }, "fontFamily": { "headline-md": ["Geist"], "label-sm": ["Inter"], "label-md": ["Inter"], "body-sm": ["Inter"], "headline-lg-mobile": ["Geist"], "headline-sm": ["Geist"], "display-lg": ["Geist"], "display-lg-mobile": ["Geist"], "body-lg": ["Inter"], "code-sm": ["Geist"], "body-md": ["Inter"], "headline-lg": ["Geist"] }, "fontSize": { "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.005em", "fontWeight": "400" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "600" }], "display-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "code-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "600" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between select-none"><div class="flex flex-col flex-1 min-h-0"><div class="h-16 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[20px]">verified_user</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight tracking-tight">AssetProof</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Enterprise Console</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">lock</span></div><nav class="flex-1 px-space-md py-space-sm overflow-y-auto flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-medium rounded-lg shadow-sm"><div class="px-space-sm pt-space-xs pb-1"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Platform Navigation</span></div><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="overview" href="#"><span>Overview</span></a><div class="mt-space-xs flex flex-col gap-1"><div class="flex items-center justify-between px-space-sm py-1.5 text-on-surface font-label-md text-label-md font-semibold"><span>Assets</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></div><div class="pl-4 pr-space-xs flex flex-col gap-space-xs"><a class="flex items-center justify-between px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="all-assets" href="#"><span>All Assets</span><span class="font-code-sm text-code-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">1,428</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="pending-verification" href="#"><span>Pending Verification</span><span class="font-code-sm text-code-sm px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-medium">14</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="asset-passport" href="#"><span>Asset Passport</span></a><a class="flex items-center px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="tokenized" href="#"><span>Tokenized</span></a><a class="flex items-center px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="retired" href="#"><span>Retired</span></a></div></div><div class="my-space-xs"></div><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="transfers" href="#"><span>Transfers</span></a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="verification-ledger" href="#"><span>Verification Ledger</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="asset-valuation" href="#"><span>Asset Valuation</span></a><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="activity-log" href="#"><span>Activity Log</span></a><div class="my-space-xs"></div><a class="flex items-center px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="console-settings" href="#"><span>Console Settings</span></a></nav></div><div class="p-space-md bg-surface-container-low m-space-md rounded-xl flex flex-col gap-2"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Node Telemetry</span><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-code-sm text-code-sm text-on-surface font-semibold">Connected</span></div></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-code-sm text-code-sm font-medium">#0492-East (US-VA)</span><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface font-semibold">FIPS 140-3</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-2xl"><div class="hidden xl:flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><span class="hover:text-on-surface cursor-pointer">Platform</span><span class="material-symbols-outlined text-[14px]">chevron_right</span><span class="hover:text-on-surface cursor-pointer">Assets</span><span class="material-symbols-outlined text-[14px]">chevron_right</span><span class="text-on-surface font-semibold">Asset Passport</span></div><div class="relative flex-1 flex items-center"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px]">search</span><input class="w-full h-10 pl-10 pr-4 bg-surface-container-low rounded-lg text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container transition-all" placeholder="Search by Asset ID, hash, issuer, or legal entity... (⌘K)" type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-label-sm text-label-sm text-on-surface font-medium">All Nodes Operational</span></div><button aria-label="Notifications" class="relative p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="hidden lg:flex flex-col items-end text-right"><span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Apex Custody Corp</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Admin | Compliance Officer</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen px-gutter py-space-lg"><div class="flex flex-col w-full">
+<!-- Top Breadcrumb & Quick Telemetry Bar -->
+<div class="flex flex-wrap items-center justify-between gap-y-2 mb-space-md">
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="hover:text-on-surface transition-colors cursor-pointer">Institutional Ledger</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="hover:text-on-surface transition-colors cursor-pointer">Assets</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded bg-surface-container text-on-surface font-semibold">INV-001</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-semibold">Retire Asset</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+        HSM-902-SG (FIPS 140-3 L4)
+      </span>
+<span class="font-code-sm text-code-sm text-on-surface-variant px-2 py-1 rounded bg-surface-container">Gate 04 / Final</span>
+</div>
+</div>
+<!-- Header Section with Rich Badges and Secondary Actions -->
+<div class="flex flex-col lg:flex-row lg:items-start justify-between gap-space-lg mb-space-xl">
+<div class="flex flex-col gap-2 max-w-3xl">
+<div class="flex flex-wrap items-center gap-2">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Retire Asset</h1>
+<span class="px-2.5 py-0.5 rounded bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm font-semibold tracking-wider uppercase">
+          Final Lifecycle Event
+        </span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+        Close the active lifecycle of a real-world asset while preserving its cryptographic provenance, Merkle audit lineage, and custodial legal novation.
+      </p>
+<div class="flex flex-wrap items-center gap-space-sm pt-1">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant font-code-sm text-code-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">verified</span>
+          Attestation Protocol v4.8.2-SECURE
+        </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant font-code-sm text-code-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">shield_lock</span>
+          FIPS 140-3 HSM Witness #HSM-902-SG
+        </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant font-code-sm text-code-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary">lock_clock</span>
+          Lifecycle Gate: Final Attestation
+        </span>
+</div>
+</div>
+<!-- Header Action CTAs -->
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-medium transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">account_tree</span>
+<span>View Provenance Ledger</span>
+</button>
+<button class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md font-medium transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+<span>Pre-Retirement Dossier</span>
+</button>
+</div>
+</div>
+<!-- Focus Asset Summary Card (Institutional Banner) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg mb-space-xl relative overflow-hidden">
+<!-- Subtle Institutional Blue Tint Overlay -->
+<div class="absolute top-0 right-0 w-96 h-96 bg-primary-container/5 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20"></div>
+<div class="relative z-10 flex flex-col xl:flex-row items-start xl:items-center justify-between gap-space-lg">
+<!-- Identity & Icon -->
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-14 h-14 rounded-xl bg-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-on-primary text-[30px]" style="font-variation-settings: 'FILL' 1;">description</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex flex-wrap items-center gap-2 mb-1">
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-bold">INV-001</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-semibold">Series 2025-A</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span>
+              ACTIVE
+            </span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight truncate">
+            ABC Supply Invoice (Series 2025-A)
+          </h2>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 text-on-surface-variant font-body-sm text-body-sm mt-0.5">
+<span class="flex items-center gap-1">
+              Beneficiary: <strong class="text-on-surface font-semibold">XYZ Ltd</strong>
+<span class="inline-flex items-center gap-0.5 ml-1 px-1.5 py-0.2 rounded bg-surface-container text-on-surface-variant font-code-sm text-[10px]">
+<span class="material-symbols-outlined text-[11px] text-primary">verified</span>
+                LEI 3358009ZXTR1892837
+              </span>
+</span>
+<span class="text-outline-variant">•</span>
+<span>Asset Class: <strong class="text-on-surface font-medium">Trade Receivables (RWA)</strong></span>
+<span class="text-outline-variant">•</span>
+<span>Token: <strong class="text-on-surface font-code-sm text-code-sm">RWA-INV-001</strong> (ERC-3643)</span>
+</div>
+</div>
+</div>
+<!-- Financial Value & Cryptographic Digest Pill -->
+<div class="flex flex-wrap sm:flex-nowrap items-center gap-space-lg w-full xl:w-auto pt-space-sm xl:pt-0">
+<div class="flex flex-col bg-surface-container-low px-space-md py-2.5 rounded-lg shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Settled Face Value</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">₹40,00,000</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">INR (~$48,150 USD)</span>
+</div>
+</div>
+<div class="flex flex-col bg-surface-container-low px-space-md py-2.5 rounded-lg flex-1 sm:flex-initial">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Canonical Merkle Digest</span>
+<div class="flex items-center gap-2 mt-0.5">
+<code class="font-code-sm text-code-sm text-primary font-semibold tracking-wider">A83F92D1...7C21</code>
+<button aria-label="Copy Hash" class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Primary Two-Column Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mb-space-xl">
+<!-- LEFT COLUMN: Retirement Governance & Execution Form (7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Card: Protocol & Governance Form -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg">
+<div class="flex items-center justify-between pb-space-md mb-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[20px]">gavel</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Asset Retirement Protocol &amp; Governance</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Record official termination of active commercial operations while locking cryptographic state.</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-code-sm text-code-sm font-semibold">REC-LIFECYCLE-44</span>
+</div>
+<form class="flex flex-col gap-space-md" onsubmit="event.preventDefault();">
+<!-- Retirement Reason Field -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between">
+<span>Retirement Reason <span class="text-error">*</span></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-normal">Dictates ledger smart contract state flag</span>
+</label>
+<div class="relative">
+<select class="w-full h-10 px-3.5 pr-10 bg-surface-container-low rounded-lg text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary appearance-none cursor-pointer">
+<option selected="" value="settled">Asset Settled — Full contract settlement and invoice payoff completed</option>
+<option value="expired">Asset Expired — Contractual validity term ended without renewal</option>
+<option value="replaced">Asset Replaced — Novated and re-tokenized under new canonical identifier</option>
+<option value="other">Other — Institutional administrative retirement</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant pointer-events-none text-[20px]">unfold_more</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              The contract settlement reason instructs the chaincode to execute an irreversible lock receipt with reason code <code class="font-code-sm text-code-sm text-primary">0x534554</code>.
+            </p>
+</div>
+<!-- Dual Field: Date/Time + Compliance Officer -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold">
+                Effective Timestamp (HSM Clock)
+              </label>
+<div class="relative flex items-center">
+<input class="w-full h-10 pl-3.5 pr-9 bg-surface-container-low rounded-lg text-on-surface font-code-sm text-code-sm font-semibold cursor-not-allowed select-all" readonly="" type="text" value="14 Mar 2026, 17:30 UTC"/>
+<span class="material-symbols-outlined absolute right-3 text-on-surface-variant text-[18px]">schedule</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Synced to atomic stratum-1 source</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold">
+                Authorizing Custody Fiduciary
+              </label>
+<div class="relative flex items-center">
+<input class="w-full h-10 pl-3.5 pr-9 bg-surface-container-low rounded-lg text-on-surface font-body-sm text-body-sm font-medium cursor-not-allowed" readonly="" type="text" value="Apex Custody Corp • Compliance Admin"/>
+<span class="material-symbols-outlined absolute right-3 text-on-surface-variant text-[18px]">verified_user</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Verified HSM Signing Session #4928</span>
+</div>
+</div>
+<!-- Settlement Reference / Clearing ID -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between">
+<span>Settlement Reference / Clearing ID <span class="text-error">*</span></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Interbank/Clearinghouse Tx</span>
+</label>
+<div class="relative flex items-center">
+<input class="w-full h-10 px-3.5 bg-surface-container-low focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary rounded-lg text-on-surface font-code-sm text-code-sm font-semibold tracking-wide" type="text" value="STL-2026-INV001-PAYOFF-FINAL"/>
+<button aria-label="Verify Clearing" class="absolute right-2 px-2 py-1 rounded bg-surface-container text-primary font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" type="button">
+                Verify RTGS
+              </button>
+</div>
+</div>
+<!-- Additional Notes / Governance Statement -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold">
+              Commercial Settlement &amp; Discharge Statement
+            </label>
+<textarea class="w-full p-3.5 bg-surface-container-low focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary rounded-lg text-on-surface font-body-sm text-body-sm leading-relaxed resize-none" rows="3">Obligor Metro Logistics &amp; Infra Ltd completed final commercial settlement on 14 Mar 2026 via RTGS clearance #CMS-883921. Full financial satisfaction confirmed by beneficial owner XYZ Ltd. Proceeding with formal lifecycle retirement to retire active smart contract rights.</textarea>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-right">248 / 1000 characters</span>
+</div>
+<!-- Supporting Settlement Dossier -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold">
+              Attached Evidentiary Settlement Dossier
+            </label>
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-9 h-9 rounded bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">
+                    settlement_satisfaction_receipt_inv001.pdf
+                  </span>
+<div class="flex items-center gap-2 font-code-sm text-code-sm text-on-surface-variant">
+<span>2.4 MB</span>
+<span>•</span>
+<span class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+                      SHA-256 Validated (d4a8...3b90)
+                    </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button aria-label="View PDF" class="p-1.5 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button aria-label="Download Document" class="p-1.5 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+</div>
+</form>
+</div>
+<!-- Card: Confirmation, Legal Attestation & Destructive Actions -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<!-- Callout Banner -->
+<div class="flex items-start gap-3 p-space-md rounded-xl bg-amber-50 text-amber-900">
+<span class="material-symbols-outlined text-amber-600 text-[22px] shrink-0 mt-0.5">warning</span>
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md font-bold text-amber-900">Irreversible Lifecycle Finality</span>
+<p class="font-body-sm text-body-sm text-amber-800 leading-normal">
+              Retirement is an immutable lifecycle transition. The asset’s historical record, valuation audit log, and cryptographic lineage remain permanently resolvable. However, this action <strong class="font-semibold text-amber-950">seals the state</strong> and permanently prevents all further ERC-3643 transfers, tokenizations, or liens.
+            </p>
+</div>
+</div>
+<!-- Checkbox Acknowledgement -->
+<label class="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer select-none">
+<input checked="" class="w-4 h-4 mt-1 rounded text-primary focus:ring-primary-container accent-primary cursor-pointer" id="retireConsentCheckbox" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface font-medium leading-snug">
+            I confirm that this asset has concluded its commercial life, all obligor covenants are satisfied, and that <strong class="text-on-surface font-semibold">INV-001</strong> should be irrevocably retired and barred from subsequent transfers.
+          </span>
+</label>
+<!-- Destructive Action Controls -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-space-sm">
+<a class="w-full sm:w-auto text-center px-5 py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-medium transition-colors" href="#">
+            Cancel &amp; Return to Asset Details
+          </a>
+<div class="flex items-center gap-space-sm w-full sm:w-auto">
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-error hover:bg-red-700 text-on-error font-label-md text-label-md font-semibold transition-all shadow-sm active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-[18px]">lock_reset</span>
+<span>Retire Asset via HSM</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Lifecycle Impact, Target Post-Retirement State & Audit Guarantees (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- Target State Spec & Constraints Matrix -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg">
+<div class="flex items-center justify-between pb-space-md mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">rule_folder</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Post-Retirement State</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant font-semibold">
+            Target Envelope
+          </span>
+</div>
+<!-- Target Status Display -->
+<div class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-low mb-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Target Lifecycle State</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">Post-Attestation Flag</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-highest text-on-surface font-label-md text-label-md font-bold tracking-wider">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+            RETIRED
+          </div>
+</div>
+<!-- Operational Constraints Breakdown -->
+<div class="flex flex-col gap-2.5 mb-space-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">
+            Chaincode Operational Constraints
+          </span>
+<!-- Constraint 1: Ownership Transfer -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<div class="w-6 h-6 rounded-full bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px]">block</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Ownership Transfer</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Chaincode Rule #RET-09</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-red-100 text-red-800 font-bold">
+              DISABLED
+            </span>
+</div>
+<!-- Constraint 2: Tokenization -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<div class="w-6 h-6 rounded-full bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Tokenization &amp; Minting</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">ERC-3643 Contract Frozen</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-red-100 text-red-800 font-bold">
+              DISABLED
+            </span>
+</div>
+<!-- Constraint 3: Provenance & History -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Provenance &amp; History</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">100% Immutable Merkle Tree</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold">
+              PRESERVED
+            </span>
+</div>
+<!-- Constraint 4: Public Cryptographic Verification -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px]">qr_code_2</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Public Verification</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Resolvable Hash &amp; QR Portal</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold">
+              ACTIVE
+            </span>
+</div>
+</div>
+<!-- Target Block Anchor Preview Box -->
+<div class="p-3.5 rounded-xl bg-surface-container-high/60 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Target Block Anchor</span>
+<span class="font-code-sm text-code-sm text-primary font-semibold">Pre-Staged Witness</span>
+</div>
+<div class="grid grid-cols-3 gap-2 pt-1 font-code-sm text-code-sm">
+<div class="flex flex-col">
+<span class="text-on-surface-variant text-[11px]">Next Transaction</span>
+<span class="text-on-surface font-semibold">TX-1142</span>
+</div>
+<div class="flex flex-col">
+<span class="text-on-surface-variant text-[11px]">Target Block</span>
+<span class="text-on-surface font-semibold">#18,294,005</span>
+</div>
+<div class="flex flex-col">
+<span class="text-on-surface-variant text-[11px]">Merkle Commit</span>
+<span class="text-on-surface font-semibold truncate">0x9f4a...88ac</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card: Permanent Audit Guarantee (Institutional Regulatory Safety) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">qr_code_2</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Permanent Audit Guarantee</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+<strong class="text-on-surface font-semibold">Non-Destructive Archival Protocol:</strong> In accordance with statutory custodial regulations and Basel III / FIPS 140-3 standards, asset retirement permanently terminates commercial rights while retaining all 6 historical ledger events, KYC dossiers, and valuation certificates intact forever.
+        </p>
+<!-- Inline SVG Visualization: Cryptographic Sealing Sequence -->
+<div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between text-on-surface font-label-sm text-label-sm font-semibold">
+<span>Cryptographic State Sealing</span>
+<span class="font-code-sm text-code-sm text-primary font-medium">Level 4 Certified</span>
+</div>
+<svg class="w-full h-8 text-primary" fill="none" viewbox="0 0 320 28" xmlns="http://www.w3.org/2000/svg">
+<!-- Node 1 -->
+<circle cx="16" cy="14" fill="currentColor" fill-opacity="0.2" r="6" stroke="currentColor" stroke-width="2"></circle>
+<path d="M14 14l1.5 1.5L19 12" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path>
+<!-- Line 1-2 -->
+<line stroke="currentColor" stroke-dasharray="3 3" stroke-width="1.5" x1="24" x2="100" y1="14" y2="14"></line>
+<!-- Node 2 -->
+<circle cx="108" cy="14" fill="currentColor" fill-opacity="0.2" r="6" stroke="currentColor" stroke-width="2"></circle>
+<path d="M106 14l1.5 1.5L111 12" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path>
+<!-- Line 2-3 -->
+<line stroke="currentColor" stroke-width="1.5" x1="116" x2="204" y1="14" y2="14"></line>
+<!-- Node 3 -->
+<circle cx="212" cy="14" fill="currentColor" fill-opacity="0.2" r="6" stroke="currentColor" stroke-width="2"></circle>
+<path d="M210 14l1.5 1.5L215 12" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path>
+<!-- Line 3-Final -->
+<line stroke="currentColor" stroke-width="2" x1="220" x2="296" y1="14" y2="14"></line>
+<!-- Lock Node -->
+<circle cx="304" cy="14" fill="currentColor" r="7"></circle>
+<rect fill="#ffffff" height="5" rx="1" width="6" x="301" y="13"></rect>
+<path d="M302.5 13V11.5a1.5 1.5 0 013 0V13" stroke="#ffffff" stroke-width="1"></path>
+</svg>
+<div class="flex items-center justify-between text-on-surface-variant font-code-sm text-[10px]">
+<span>Issuance</span>
+<span>Attestation</span>
+<span>Settlement</span>
+<span class="text-primary font-bold">Immutable Archive</span>
+</div>
+</div>
+<!-- Quick Proof Links -->
+<div class="flex items-center gap-space-sm pt-1">
+<a class="inline-flex items-center gap-1.5 text-primary hover:text-primary-container font-label-md text-label-md font-semibold transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px]">list_alt</span>
+<span>View Full Event Log</span>
+</a>
+<span class="text-outline-variant">•</span>
+<a class="inline-flex items-center gap-1.5 text-primary hover:text-primary-container font-label-md text-label-md font-semibold transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px]">device_hub</span>
+<span>Download Merkle Proof Tree</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- BOTTOM INSTITUTIONAL COMPLIANCE & SIGNING BAR -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col lg:flex-row items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm max-w-3xl">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-on-surface-variant flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold uppercase tracking-wider">
+          Custodial Compliance Mandate
+        </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Submitting this lifecycle transition transmits an ed25519 payload signed by Apex Custody Corp to the distributed consensus pool. This operation satisfies all novation discharge disclosure rules under Article 9 Uniform Commercial Code and national registry standards.
+        </p>
+</div>
+</div>
+<!-- Signing Execution CTA Group -->
+<div class="flex flex-wrap items-center justify-end gap-space-sm w-full lg:w-auto shrink-0">
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-medium transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+<span>Export Manifest (.json)</span>
+</button>
+<button class="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-bold transition-all shadow-sm active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-[18px]">key</span>
+<span>Confirm Retirement &amp; Sign HSM</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Dynamic visual feedback for legal consent checkbox
+  const consentBox = document.getElementById('retireConsentCheckbox');
+  if (consentBox) {
+    consentBox.addEventListener('change', function() {
+      const retireButtons = document.querySelectorAll('button[class*="bg-error"]');
+      retireButtons.forEach(btn => {
+        if (!consentBox.checked) {
+          btn.classList.add('opacity-50', 'cursor-not-allowed');
+          btn.setAttribute('disabled', 'true');
+        } else {
+          btn.classList.remove('opacity-50', 'cursor-not-allowed');
+          btn.removeAttribute('disabled');
+        }
+      });
+    });
+  }
+</script></main></div></body></html>

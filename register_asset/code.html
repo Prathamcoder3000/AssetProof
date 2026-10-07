@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary": "#ffffff", "surface-container-low": "#eff4ff", "surface-container-highest": "#d3e4fe", "on-error-container": "#93000a", "surface": "#f8f9ff", "secondary-fixed-dim": "#bec6e0", "tertiary-fixed-dim": "#93ccff", "on-background": "#0b1c30", "primary-container": "#1d4ed8", "inverse-surface": "#213145", "on-tertiary-fixed": "#001d31", "on-tertiary-fixed-variant": "#004b73", "tertiary": "#004870", "on-tertiary": "#ffffff", "primary-fixed": "#dce1ff", "primary-fixed-dim": "#b7c4ff", "tertiary-container": "#006194", "primary": "#0037b0", "error-container": "#ffdad6", "tertiary-fixed": "#cce5ff", "on-error": "#ffffff", "surface-bright": "#f8f9ff", "on-primary-container": "#cad3ff", "background": "#f8f9ff", "error": "#ba1a1a", "on-surface-variant": "#434655", "on-primary-fixed": "#001551", "secondary-fixed": "#dae2fd", "on-secondary-fixed": "#131b2e", "on-tertiary-container": "#b2d9ff", "on-surface": "#0b1c30", "surface-container-lowest": "#ffffff", "on-secondary-fixed-variant": "#3f465c", "outline": "#747686", "secondary-container": "#dae2fd", "surface-container-high": "#dce9ff", "inverse-primary": "#b7c4ff", "on-primary-fixed-variant": "#0039b5", "on-primary": "#ffffff", "surface-dim": "#cbdbf5", "surface-tint": "#2151da", "secondary": "#565e74", "inverse-on-surface": "#eaf1ff", "surface-container": "#e5eeff", "surface-variant": "#d3e4fe", "outline-variant": "#c4c5d7", "on-secondary-container": "#5c647a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "space-md": "1rem", "space-lg": "1.5rem", "margin-sm": "1rem", "space-xs": "0.25rem", "gutter-sm": "1rem", "space-xl": "2.5rem", "margin": "2rem", "space-sm": "0.5rem" }, "fontFamily": { "body-sm": ["Inter"], "headline-lg": ["Geist"], "headline-lg-mobile": ["Geist"], "display-lg": ["Geist"], "headline-sm": ["Geist"], "body-lg": ["Inter"], "code-sm": ["Geist"], "body-md": ["Inter"], "headline-md": ["Geist"], "label-md": ["Inter"], "display-lg-mobile": ["Geist"], "label-sm": ["Inter"] }, "fontSize": { "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.005em", "fontWeight": "400" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "code-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }], "display-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between select-none"><div class="flex flex-col flex-1 min-h-0"><div class="h-16 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[20px]">verified_user</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight tracking-tight">AssetProof</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Enterprise Console</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">lock</span></div><nav class="flex-1 px-space-md py-space-sm overflow-y-auto flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary rounded-lg"><div class="px-space-sm pt-space-xs pb-1"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Platform Navigation</span></div><a class="flex items-center justify-between px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Overview</span></a><div class="mt-space-xs flex flex-col gap-1"><div class="flex items-center justify-between px-space-sm py-1.5 text-on-surface font-label-md text-label-md font-semibold"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-primary">inventory_2</span><span>Assets</span></div><span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span></div><div class="pl-8 pr-space-xs flex flex-col gap-space-xs"><a aria-current="page" class="flex items-center justify-between px-space-sm py-1.5 transition-colors font-label-md bg-primary-container text-on-primary rounded-lg" data-path="all-assets" href="#"><span>All Assets</span><span class="font-code-sm text-code-sm px-1.5 py-0.5 rounded bg-surface-container-lowest/20 text-on-primary font-medium">1,428</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="pending-verification" href="#"><span>Pending Verification</span><span class="font-code-sm text-code-sm px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-medium">14</span></a><a class="flex items-center px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="tokenized" href="#"><span>Tokenized</span></a><a class="flex items-center px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="retired" href="#"><span>Retired</span></a></div></div><div class="my-space-xs"></div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="transfers" href="#"><span class="material-symbols-outlined text-[20px]">swap_horiz</span><span>Transfers</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="verification" href="#"><span class="material-symbols-outlined text-[20px]">fact_check</span><span>Verification Ledger</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="asset-passport" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span>Asset Passport</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="activity" href="#"><span class="material-symbols-outlined text-[20px]">history</span><span>Activity Log</span></a><div class="my-space-xs"></div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Console Settings</span></a></nav></div><div class="p-space-md bg-surface-container-low m-space-md rounded-xl flex flex-col gap-2"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Node Telemetry</span><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-code-sm text-code-sm text-on-surface font-semibold">Connected</span></div></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-code-sm text-code-sm font-medium">#0492-East (US-VA)</span><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface font-semibold">FIPS 140-3</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex-1 max-w-xl"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px]">search</span><input class="w-full h-10 pl-10 pr-4 bg-surface-container-low rounded-lg text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container transition-all" placeholder="Search by Asset ID, hash, issuer, or legal entity... (⌘K)" type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-label-sm text-label-sm text-on-surface font-medium">All Nodes Operational</span></div><button aria-label="Notifications" class="relative p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="hidden lg:flex flex-col items-end text-right"><span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Apex Custody Corp</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Admin | Compliance Officer</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen px-gutter py-space-lg"><div class="flex flex-col w-full">
+<!-- Header & Breadcrumbs Area -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pb-space-lg">
+<div class="flex flex-col gap-1">
+<nav aria-label="Breadcrumb" class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Institutional Ledger</span>
+<span class="material-symbols-outlined text-outline text-[14px]">chevron_right</span>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors font-medium" href="#">Assets</a>
+<span class="material-symbols-outlined text-outline text-[14px]">chevron_right</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Register Asset</span>
+</nav>
+<div class="flex items-baseline gap-space-sm mt-1">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Register Asset</h1>
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-semibold tracking-wide">STAGE 01 / ONBOARDING</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Create a tamper-evident digital record and compute state attestation proofs for an institutional real-world asset.</p>
+</div>
+<!-- Right Cryptographic Controls -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold uppercase tracking-wider">FIPS 140-3 HSM Attested</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Session #HSM-902-SG</span>
+</div>
+</div>
+<div class="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-code-sm text-code-sm text-on-surface font-medium">Protocol v4.8.2</span>
+</div>
+</div>
+</div>
+<!-- Two-Column Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- LEFT / MAIN WORKFLOW COLUMN (approx 68% / 8 of 12 cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- SECTION 1: Asset Information -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md relative overflow-hidden">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-lg bg-primary-container text-on-primary flex items-center justify-center font-headline-sm text-headline-sm font-semibold">1</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Asset Information</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Specify taxonomy, identifiers, and formal descriptor</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant uppercase tracking-wider font-semibold">Core Metadata</span>
+</div>
+<!-- Asset Classification Radio Selector -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md font-semibold text-on-surface">Asset Taxonomy Class</label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="asset-type-selector">
+<label class="relative flex items-center gap-3 p-3 rounded-lg bg-surface-container cursor-pointer transition-all hover:bg-surface-container-high">
+<input class="w-4 h-4 text-primary focus:ring-0" name="asset_type" type="radio" value="Land"/>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px]">terrain</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Land &amp; Property</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Real Estate / Title</span>
+</div>
+</div>
+</label>
+<label class="relative flex items-center gap-3 p-3 rounded-lg bg-surface-container cursor-pointer transition-all hover:bg-surface-container-high">
+<input class="w-4 h-4 text-primary focus:ring-0" name="asset_type" type="radio" value="Commodity"/>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px]">oil_barrel</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Commodity</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Precious Metals, Agro</span>
+</div>
+</div>
+</label>
+<label class="relative flex items-center gap-3 p-3 rounded-lg bg-primary/10 shadow-sm cursor-pointer transition-all">
+<input checked="" class="w-4 h-4 text-primary focus:ring-0" name="asset_type" type="radio" value="Invoice"/>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px]">receipt_long</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-primary">Invoice / Debt</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Receivables &amp; Paper</span>
+</div>
+</div>
+</label>
+</div>
+</div>
+<!-- Two Column: Asset ID & Name -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-2">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="asset-id">Asset Ledger Identifier</label>
+<span class="font-code-sm text-code-sm text-primary flex items-center gap-1 font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Auto-Assigned
+              </span>
+</div>
+<div class="relative flex items-center">
+<input class="w-full h-10 px-3 pr-10 rounded-lg bg-surface-container-low font-code-sm text-code-sm text-on-surface font-semibold focus:outline-none focus:ring-0 select-all" id="asset-id" readonly="" type="text" value="INV-2025-013"/>
+<button aria-label="Copy Asset ID" class="absolute right-2 p-1 text-on-surface-variant hover:text-on-surface transition-colors" onclick="navigator.clipboard.writeText('INV-2025-013')" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Unique deterministic token hash allocated by Node cluster.</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="asset-name">Asset Title / Descriptive Label</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" id="asset-name" placeholder="e.g. Industrial Warehouse Bond" type="text" value="Commercial Freight Receivables Q3"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Standard legal nomenclature recognized in syndicate instruments.</span>
+</div>
+</div>
+<!-- Description Textarea -->
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="asset-desc">Extended Narrative Description</label>
+<span class="font-code-sm text-code-sm text-on-surface-variant">142 / 1,000 characters</span>
+</div>
+<textarea class="w-full p-3 rounded-lg bg-surface-container font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all resize-none" id="asset-desc" rows="3">Verified batch of non-recourse sovereign logistics freight invoices backed by tier-1 maritime transport manifests and verified port bills of lading.</textarea>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span>Included in zero-knowledge validation payload. Markdown styling supported.</span>
+</div>
+</div>
+</section>
+<!-- SECTION 2: Legal Ownership & Custody -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-lg bg-primary-container text-on-primary flex items-center justify-center font-headline-sm text-headline-sm font-semibold">2</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Legal Ownership &amp; Custody</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Designate fiduciary custodian and registered corporate beneficiaries</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant uppercase tracking-wider font-semibold">Jurisdictional Title</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="owner-name">Registered Entity Name</label>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-highest text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Verified Entity
+              </span>
+</div>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" id="owner-name" type="text" value="ABC Global Holdings Ltd"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Primary titleholder per deed of trust or contractual assignment.</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="entity-lei">Legal Entity Identifier (LEI / CIK)</label>
+<div class="relative flex items-center">
+<input class="w-full h-10 px-3 pr-10 rounded-lg bg-surface-container font-code-sm text-code-sm text-on-surface uppercase focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" id="entity-lei" type="text" value="ORG-884920-SG"/>
+<span class="material-symbols-outlined text-primary text-[18px] absolute right-3">account_balance</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">GMEI Global LEI Registry synchronized. Status: Active.</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5 pt-1">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="custody-covenant">Ownership Reference &amp; Escrow Covenant ID</label>
+<div class="relative flex items-center">
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container font-code-sm text-code-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" id="custody-covenant" type="text" value="COV-2025-0982-BL-PAR"/>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Official notary filing or tripartite escrow agreement key.</span>
+<span class="font-code-sm text-code-sm text-primary font-semibold">Apex Custody Corp (Verified Depot)</span>
+</div>
+</div>
+</section>
+<!-- SECTION 3: Supporting Evidence & Attestation Documents -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-lg bg-primary-container text-on-primary flex items-center justify-center font-headline-sm text-headline-sm font-semibold">3</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Supporting Evidence &amp; Attestation Documents</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Off-chain evidence integrity notarization</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant uppercase tracking-wider font-semibold">Cryptographic Proofs</span>
+</div>
+<!-- Institutional Upload Drag & Drop Box -->
+<div class="rounded-xl bg-surface-container-low p-space-lg flex flex-col items-center justify-center text-center cursor-pointer transition-all hover:bg-surface-container group">
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-center mb-space-sm group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-primary text-[26px]">cloud_upload</span>
+</div>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Drag &amp; drop attestation dossiers, or browse</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 max-w-sm">Accepted institutional archives: PDF, TIFF, or XML manifests up to 50MB per file.</span>
+<div class="mt-3 flex items-center gap-2">
+<button class="h-8 px-3 rounded-lg bg-surface-container-lowest shadow-sm text-primary font-label-md text-label-md font-semibold hover:bg-surface-container transition-colors" type="button">Select From Local Vault</button>
+<span class="font-body-sm text-body-sm text-on-surface-variant">or</span>
+<button class="h-8 px-3 rounded-lg bg-surface-container-lowest shadow-sm text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container transition-colors" type="button">Pull via SWIFT MT798</button>
+</div>
+</div>
+<!-- Attached Document Preview Card -->
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Attached &amp; Hashed Files (1)</span>
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low shadow-sm">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">invoice_series_a4_master.pdf</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest text-primary font-semibold shrink-0 flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check</span> Checksum Computed
+                  </span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-code-sm text-code-sm">
+<span>PDF • 2.4 MB</span>
+<span>•</span>
+<span class="truncate">SHA-256: 0x9f2a71cd810b54e389d...8c11</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0 ml-3">
+<button aria-label="View Document" class="p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button aria-label="Download Document" class="p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button aria-label="Remove Document" class="p-2 rounded-lg text-error hover:bg-error-container/40 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Compliance & Off-chain Disclaimer Banner -->
+<div class="p-space-md rounded-xl bg-surface-container-high flex items-start gap-space-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">shield</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md font-semibold">Zero-Knowledge Storage Policy</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Original documents remain strictly off-chain within customer-controlled cold storage. AssetProof records and anchors solely the cryptographic integrity fingerprint (SHA-256 Merkle root) on the permissioned ledger.</p>
+</div>
+</div>
+</section>
+<!-- SECTION 4: Initial Valuation & Ledger Entry -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-lg bg-primary-container text-on-primary flex items-center justify-center font-headline-sm text-headline-sm font-semibold">4</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Initial Valuation &amp; Ledger Entry</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Financial baseline, baseline valuation date, and certified appraiser</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant uppercase tracking-wider font-semibold">Financial Anchor</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md">
+<!-- Value Amount -->
+<div class="md:col-span-5 flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="asset-val">Estimated Valuation</label>
+<div class="relative flex items-center">
+<span class="absolute left-3 font-code-sm text-code-sm font-bold text-on-surface-variant">₹</span>
+<input class="w-full h-10 pl-8 pr-3 rounded-lg bg-surface-container font-code-sm text-code-sm text-on-surface font-semibold focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" id="asset-val" type="text" value="45,00,000"/>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Forty-Five Lakh INR equivalent (~$54,200 USD).</span>
+</div>
+<!-- Currency Selector -->
+<div class="md:col-span-3 flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="val-currency">Base Currency</label>
+<div class="relative flex items-center">
+<select class="w-full h-10 px-3 rounded-lg bg-surface-container font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all appearance-none cursor-pointer" id="val-currency">
+<option selected="" value="INR">INR (₹) - Indian Rupee</option>
+<option value="USD">USD ($) - US Dollar</option>
+<option value="EUR">EUR (€) - Euro</option>
+<option value="GBP">GBP (£) - British Pound</option>
+</select>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant absolute right-3 pointer-events-none">unfold_more</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">ISO 4217 denomination.</span>
+</div>
+<!-- Valuation Date -->
+<div class="md:col-span-4 flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="val-date">Effective Appraisal Date</label>
+<div class="relative flex items-center">
+<input class="w-full h-10 px-3 pr-10 rounded-lg bg-surface-container font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" id="val-date" type="text" value="14 Oct 2025"/>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant absolute right-3">calendar_today</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Audit closing cutoff.</span>
+</div>
+</div>
+<!-- Appraiser & Source -->
+<div class="flex flex-col gap-1.5 pt-1">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="appraiser">Valuation Source / Certified Independent Appraiser</label>
+<div class="relative flex items-center">
+<input class="w-full h-10 px-3 pr-10 rounded-lg bg-surface-container font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" id="appraiser" type="text" value="Knight Frank LLP • Registered Valuers Board Certificate #RV-4992"/>
+<span class="material-symbols-outlined text-primary text-[20px] absolute right-3">approval</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Appraiser holds valid Tier-1 compliance credentials in sovereign registry.</span>
+</div>
+</section>
+<!-- Bottom Pipeline Informational Callout & Action Bar -->
+<div class="flex flex-col gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex items-center gap-space-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[24px] shrink-0">info</span>
+<p class="font-body-md text-body-md text-on-surface">
+<strong class="font-semibold text-primary">Next in sequence:</strong> After registration, this asset enters <span class="underline decoration-primary">Cryptographic Verification &amp; Custody Attestation</span> before initial notarization and permissioned tokenization.
+          </p>
+</div>
+<!-- Action Controls -->
+<div class="flex flex-col-reverse sm:flex-row items-center justify-between gap-space-sm pt-2 pb-space-lg">
+<button class="w-full sm:w-auto h-10 px-5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold transition-colors" type="button">
+            Cancel Registration
+          </button>
+<div class="w-full sm:w-auto flex items-center gap-3">
+<button class="w-full sm:w-auto h-10 px-5 rounded-lg bg-surface-container-lowest shadow-sm hover:bg-surface-container text-on-surface font-label-md text-label-md font-semibold flex items-center justify-center gap-2 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Save Draft</span>
+</button>
+<button class="w-full sm:w-auto h-10 px-6 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md font-semibold shadow-md flex items-center justify-center gap-2 transition-all" type="button">
+<span>Register Asset</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT / SUMMARY & PROOF PANEL (approx 32% / 4 of 12 cols) -->
+<aside class="lg:col-span-4 flex flex-col gap-space-md lg:sticky lg:top-20">
+<!-- Primary Summary Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">fact_check</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Registration Summary</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary/10 text-primary font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span> Live Preview
+          </span>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<!-- Key Asset Metric Highlight -->
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Baseline Declared Value</span>
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-on-surface font-bold">₹45,00,000</span>
+<span class="font-code-sm text-code-sm text-primary font-semibold">INR</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Valuation cert: Knight Frank LLP</span>
+</div>
+<!-- Breakdown List -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between py-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Asset Class</span>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container font-label-md text-label-md font-semibold text-on-surface">
+<span class="material-symbols-outlined text-primary text-[16px]">receipt_long</span>
+<span>Invoice Receivables</span>
+</div>
+</div>
+<div class="flex items-center justify-between py-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Assigned Token ID</span>
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded bg-surface-container-low text-primary font-semibold">INV-2025-013</span>
+</div>
+<div class="flex items-center justify-between py-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Beneficial Title</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface text-right truncate max-w-[170px]" title="ABC Global Holdings Ltd">ABC Global Holdings Ltd</span>
+</div>
+<div class="flex items-center justify-between py-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Legal Entity ID</span>
+<span class="font-code-sm text-code-sm text-on-surface">ORG-884920-SG</span>
+</div>
+<div class="flex items-center justify-between py-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Evidence Package</span>
+<span class="font-label-md text-label-md font-medium text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px]">attach_file</span> 1 file (2.4 MB)
+              </span>
+</div>
+</div>
+<!-- Lifecycle Pipeline Tracker -->
+<div class="flex flex-col gap-3 pt-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Ledger Pipeline Status</span>
+<div class="flex flex-col gap-2">
+<!-- Step 1 -->
+<div class="flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="font-code-sm text-code-sm font-bold">1</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Asset Onboarding</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-primary/10 text-primary font-semibold">IN PROGRESS</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Assembling initial metadata record</span>
+</div>
+</div>
+<!-- Connector Line -->
+<div class="ml-3 w-0.5 h-3 bg-surface-container"></div>
+<!-- Step 2 -->
+<div class="flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center shrink-0 mt-0.5">
+<span class="font-code-sm text-code-sm font-bold">2</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface-variant">Cryptographic Attestation</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Merkle proof &amp; HSM notary signature</span>
+</div>
+</div>
+<!-- Connector Line -->
+<div class="ml-3 w-0.5 h-3 bg-surface-container"></div>
+<!-- Step 3 -->
+<div class="flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center shrink-0 mt-0.5">
+<span class="font-code-sm text-code-sm font-bold">3</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface-variant">Custodian Notarization</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Independent appraiser confirmation</span>
+</div>
+</div>
+<!-- Connector Line -->
+<div class="ml-3 w-0.5 h-3 bg-surface-container"></div>
+<!-- Step 4 -->
+<div class="flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center shrink-0 mt-0.5">
+<span class="font-code-sm text-code-sm font-bold">4</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface-variant">Tokenization &amp; Passport Minting</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Digital twin state commitment</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Card Footer -->
+<div class="p-space-md bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">lock</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-semibold">Security Assertion</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Merkle Root Witness generated upon submission. Immutable record logged on Node <span class="font-code-sm text-code-sm font-semibold text-on-surface">#0492-East</span>.</p>
+</div>
+</div>
+<!-- Quick Institutional Help / Reference Card -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[20px]">help_outline</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Need Multi-Sig Authorization?</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Assets over $1M equivalent require 2 of 3 cryptographic signatories before final state commitment.</p>
+<a class="font-label-sm text-label-sm text-primary font-semibold hover:underline inline-flex items-center gap-1 mt-1" href="#">
+<span>Review Fiduciary Policies</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</aside>
+</div>
+</div>
+<script>
+  // Simple reactive selection micro-interaction for Asset Taxonomy pills
+  (function() {
+    const selectorContainer = document.getElementById('asset-type-selector');
+    if (!selectorContainer) return;
+
+    const labels = selectorContainer.querySelectorAll('label');
+    labels.forEach(label => {
+      label.addEventListener('click', () => {
+        labels.forEach(l => {
+          l.classList.remove('bg-primary/10', 'shadow-sm');
+          l.classList.add('bg-surface-container');
+          const title = l.querySelector('.font-label-md');
+          if (title) {
+            title.classList.remove('text-primary');
+            title.classList.add('text-on-surface');
+          }
+        });
+
+        label.classList.remove('bg-surface-container');
+        label.classList.add('bg-primary/10', 'shadow-sm');
+        const activeTitle = label.querySelector('.font-label-md');
+        if (activeTitle) {
+          activeTitle.classList.remove('text-on-surface');
+          activeTitle.classList.add('text-primary');
+        }
+      });
+    });
+  })();
+</script></main></div></body></html>
